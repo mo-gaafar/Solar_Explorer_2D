@@ -42,13 +42,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3725269279573294831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8caaf0fa6e2afae48b7e3e537911169a, type: 3}
+  m_Script: {fileID: 11500000, guid: ee66d53d393a9ea4f9be4b9bc4104e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shootState: 0
   damage: 10
-  shootingInterval: 0.02
-  range: 12
+  shootingInterval: 100
+  range: 100
   lastShotTime: 0
   impactForce: 30
 --- !u!120 &3725269279573294828

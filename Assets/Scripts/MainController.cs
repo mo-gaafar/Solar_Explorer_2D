@@ -55,9 +55,9 @@ public abstract class MainController : MonoBehaviour {
     }
 
     public void MoveTowards (Vector2 target, float verticalAxis) {
-        Vector2 direction = target - (Vector2) position;
-        direction *= verticalAxis;
-        rb.AddForce (new Vector2 (direction.x * maxForce, direction.y * maxForce));
+        float Horizontal = Input.GetAxisRaw("Horizontal") * maxForce;
+        float Vertical = Input.GetAxisRaw("Vertical") * maxForce;
+        rb.velocity = new Vector2(Horizontal, Vertical);
     }
 
     //health

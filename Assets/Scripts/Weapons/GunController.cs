@@ -14,13 +14,16 @@ public class GunController : MonoBehaviour {
     //TODO: make private later
     static private int _inventorySize = 3;
     public List<Gun> _gunInventory = new List<Gun> (_inventorySize);
+    public List<GunCollectible> _CollectibleInventory = new List<GunCollectible> (_inventorySize);
     // private int _currentGunIndex = 0;
 
     private ShootingState _currentShootingState = 0;
     [SerializeField] private float switchingTime = 0.5f;
     private float lastPickupTime = 0f;
     const float PICKUP_INTERVAL = 2f;
+    GunCollectible currentCollectible;
 
+    int GunIndex=0;
     enum ShootingState {
         IdleReady,
         Shooting,
@@ -65,39 +68,59 @@ public class GunController : MonoBehaviour {
 
     }
 
-    private void OnCollisionEnter2D (Collision2D other) {
-        if (other.gameObject.tag == "WeaponPickup") {
-            //debouncing
-            if (Time.time - lastPickupTime > PICKUP_INTERVAL) {
-                {
-                    lastPickupTime = Time.time;
-                    // Detect weapon obj and add to inventory
-                    PickupWeapon (other.gameObject.GetComponent<Gun> ());
-                }
-            }
-        }
-    }
 
-    void PickupWeapon (Gun gun) {
+
+
+    public void PickupGunCollectible(GunCollectible Collected) {
         // check if inventory fits
-        if (_inventorySize - 1 < _gunInventory.Count) {
-            Debug.Log ("Inventory is full");
+        Gun gun = Collected.TheGun;
+        if (_gunInventory.Count == _inventorySize ) {
+
+            if (GunIndex == 2)
+            {
+                GunIndex = 0;
+            }
+            else
+            {
+                GunIndex++;
+
+            }
+            //GunIndex = (GunIndex == 3) ? 0 : GunIndex++;
+
+            Debug.Log("Gun index is " + GunIndex);
+
+            //Remove first weapon, insert the one we took
+            GunCollectible ThrownCollectible = _CollectibleInventory[GunIndex];
+            Gun GunToDestroy = _gunInventory[GunIndex];
+            Destroy(GunToDestroy);
+
+            //throw it 
+            ThrownCollectible.Spawn(transform.position);
+
+
+            _gunInventory[GunIndex] = gun;
+            _CollectibleInventory[GunIndex] = Collected;
+            SwitchWeapon(GunIndex);
             return;
         }
+
         // Add weapon to last slot in inventory array
         //TODO: add copy constructor here
 
-        int newIndex = _gunInventory.Count - 1;
-        _gunInventory.Add (Instantiate (gun));
+        //Debug.Log("OUT Gun index is " + GunIndex);
+        _CollectibleInventory.Add(Collected);
+        _gunInventory.Add (gun);
+
+        GunIndex = _gunInventory.Count - 1;
         // Switch to weapon?
-        SwitchWeapon (newIndex);
+        SwitchWeapon (GunIndex);
     }
 
     async void SwitchWeapon (int gunIndex) {
         // TODO: add loading bar for switching weapon
 
         // check if inventory only contains one gun
-
+        Debug.Log("Switch ONNNNN");
         if (_currentShootingState == ShootingState.Switching) {
             Debug.Log ("Already switching");
             return;
@@ -107,6 +130,7 @@ public class GunController : MonoBehaviour {
             return;
         }
         if (_gunInventory.Count == 1) {
+            currentGun = _gunInventory[0];
             Debug.Log ("No weapon to switch to");
         }
         //update state

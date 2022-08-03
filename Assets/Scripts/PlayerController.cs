@@ -51,8 +51,8 @@ public class PlayerController : MainController {
         if (nearbyPickups != null && nearbyPickups.Length > 0) {
             // Debug.Log ("Length: " + nearbyEnemies.Length);
             for (int i = 0; i < nearbyPickups.Length; i++) {
-                Pickup nearbyPickup = nearbyPickups[i].GetComponent<Pickup> ();
-                nearbyPickup?.onPickup.Invoke (gameObject);
+                //Pickup nearbyPickup = nearbyPickups[i].GetComponent<Pickup> ();
+                //nearbyPickup?.onPickup.Invoke (gameObject);
 
             }
         }
