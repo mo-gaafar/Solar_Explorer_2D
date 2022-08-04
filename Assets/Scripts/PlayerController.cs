@@ -8,9 +8,10 @@ public class PlayerController : MainController {
     [SerializeField] private Camera playerCamera;
 
     [SerializeField] private float PickupDetectionRadius = 1f;
+    [SerializeField] private UnityEvent<float> onFuelPickup;
 
-    public int CurrentFuel=0;
-    int MaxFuel=1000;
+    private float CurrentFuel = 0;
+    public float MaxFuel = 1000;
 
     private float vertical = 0; //acc = 1 decel = -1
 
@@ -60,6 +61,11 @@ public class PlayerController : MainController {
             }
         }
     }
+    public void MoveTowards (Vector2 target, float verticalAxis) {
+        float Horizontal = Input.GetAxisRaw ("Horizontal") * maxForce;
+        float Vertical = Input.GetAxisRaw ("Vertical") * maxForce;
+        rb.velocity = new Vector2 (Horizontal, Vertical);
+    }
 
     private void FixedUpdate () {
         base.FixedUpdate ();
@@ -68,22 +74,21 @@ public class PlayerController : MainController {
         Vector2 mousePos = playerCamera.ScreenToWorldPoint (Input.mousePosition);
 
         // TODO: use events and callbacks instead
-        base.MoveTowards (mousePos, vertical);
+        // base.MoveTowards (mousePos, vertical);
+        MoveTowards (mousePos, vertical);
         base.LookAt (mousePos);
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Fuel")
-        {
-            CurrentFuel += (other.gameObject.GetComponent<Fuel>()).FuelAmount;
+    private void OnTriggerEnter2D (Collider2D other) {
+        if (other.tag == "Fuel") {
+            CurrentFuel += (other.gameObject.GetComponent<Fuel> ()).FuelAmount;
 
             float fraction = CurrentFuel / MaxFuel;
             //Call from UI and update it 
             //TODO: ADD UI UPDATE HERE
-
-            Destroy(other.gameObject);  
+            onFuelPickup.Invoke (fraction);
+            Destroy (other.gameObject);
         }
     }
 }

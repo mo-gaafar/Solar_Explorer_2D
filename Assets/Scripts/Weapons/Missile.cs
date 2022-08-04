@@ -13,9 +13,8 @@ public class Missile : Projectile {
         Destroy (gameObject, 5);
     }
 
-    private void Awake()
-    {
-        Debug.Log(" Hello World");
+    private void Awake () {
+        Debug.Log (" Hello World");
     }
     public override void Update () {
         float moveSpeed = 10f;
@@ -27,7 +26,7 @@ public class Missile : Projectile {
     }
 
     public override void OnCollisionEnter2D (Collision2D other) {
-        if (other.gameObject.tag == "Enemy") {
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Player" || other.gameObject.tag == "Obstacle") {
             Debug.Log ("Hit enemy");
 
             // OnHit.Invoke (other.gameObject); // call OnHit event
@@ -41,8 +40,8 @@ public class Missile : Projectile {
             // Debug.Log ("Hit wall");
         }
 
-        GameObject lol = Instantiate(HitEffect1, transform.position, transform.rotation);
-        lol = Instantiate(HitEffect2, transform.position, transform.rotation);
+        GameObject lol = Instantiate (HitEffect1, transform.position, transform.rotation);
+        lol = Instantiate (HitEffect2, transform.position, transform.rotation);
 
         Destroy (gameObject);
 

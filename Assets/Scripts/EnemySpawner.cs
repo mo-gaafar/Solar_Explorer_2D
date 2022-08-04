@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class Enemy {
+    public string Name;
+    public GameObject Prefab;
+    [Range (0f, 100f)] public float Chance = 100f;
+    [HideInInspector] public double _weight;
+
+}
+
+public class EnemySpawner : MonoBehaviour {
+    [SerializeField] public float spawnInterval = 1f;
+    [SerializeField] public float spawnRadius = 10f;
+    [SerializeField] private Enemy[] enemies;
+
+    private double accumulatedWeights;
+    private System.Random rand = new System.Random ();
+
+    private void Awake () {
+        CalculateWeights ();
+    }
+
+    // Start is called before the first frame update
+    void Start () {
+        //for testing purposes
+        for (int i = 0; i < 10; i++) {
+            SpawnRandomEnemy (new Vector2 (Random.Range (-spawnRadius, spawnRadius), Random.Range (-spawnRadius, spawnRadius)));
+        }
+
+    }
+
+    private void SpawnRandomEnemy (Vector2 spawnPosition) {
+        GameObject enemyPrefabs = enemies[GetRandomEnemyIndex ()].Prefab;
+
+        Instantiate (enemyPrefabs, spawnPosition, Quaternion.identity);
+    }
+
+    private int GetRandomEnemyIndex () {
+        double randomNumber = rand.NextDouble () * accumulatedWeights;
+        for (int i = 0; i < enemies.Length; i++) {
+            if (enemies[i]._weight >= randomNumber) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    private void CalculateWeights () {
+        accumulatedWeights = 0f;
+        foreach (Enemy enemy in enemies) {
+            accumulatedWeights += enemy.Chance;
+            enemy._weight = accumulatedWeights;
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+    }
+}
