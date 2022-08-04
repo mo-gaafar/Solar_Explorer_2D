@@ -7,6 +7,8 @@ public class Health : MonoBehaviour {
     [SerializeField] private float _maxHealth = 100;
     [SerializeField] private float _health = 100; //TODO: make private after debugging
 
+    CameraShake CameraShake;
+
     public UnityEvent<GameObject> onDeath;
     public UnityEvent<float> onHit;
     public UnityEvent<float> onHeal;
@@ -49,11 +51,15 @@ public class Health : MonoBehaviour {
             onMaxHealthChanged.Invoke (_maxHealth);
         }
     }
+    private void Awake () {
+        CameraShake = GameObject.FindGameObjectWithTag ("PlayerCamera").GetComponent<CameraShake> ();
+    }
 
     private void OnEnable () {
         _health = MaxHealth;
         onHit.AddListener ((float damage) => {
             TakeDamage (damage);
+            CameraShake.Shake ();
             Debug.Log ("Damaging");
         });
         onHeal.AddListener ((float heal) => {
