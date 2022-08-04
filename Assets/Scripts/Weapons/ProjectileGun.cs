@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class ProjectileGun : Gun {
 
-    [SerializeField] private Transform pfProjectile;
+    [SerializeField] private GameObject pfProjectile;
+
+    public void SetProjectile(GameObject newProjectile)
+    {
+        pfProjectile = newProjectile;
+    }
 
     public override void Awake () {
         Debug.Log ("ProjectileGun Awake");
+
     }
 
     public override void Start () {
@@ -22,12 +28,16 @@ public class ProjectileGun : Gun {
     public override void Shoot (Transform firingPoint) {
         Debug.Log ("ProjectileGun Shoot");
         // Debug.Log ("firingPoint: " + firingPoint.position.x + " " + firingPoint.position.y);
+        Debug.Log (Time.time - lastShotTime);
+        Debug.Log($"Shooting Interval is {shootingInterval}");
+
         if (Time.time - lastShotTime > shootingInterval) {
             lastShotTime = Time.time;
-            Transform projectileTransform = Transform.Instantiate (pfProjectile, firingPoint.position, firingPoint.rotation);
-            Projectile projectile = projectileTransform.GetComponent<Projectile> ();
-            projectile.Setup (projectileTransform.up);
-            projectile.SetDamage (damage);
+            Debug.Log("I am not sus ya nasser");
+            GameObject projectile = Instantiate (pfProjectile, firingPoint.position, firingPoint.rotation);
+            Projectile projectileScript = projectile.GetComponent<Projectile>();
+            projectileScript.Setup (projectile.transform.up);
+            projectileScript.SetDamage (damage);
         }
     }
 

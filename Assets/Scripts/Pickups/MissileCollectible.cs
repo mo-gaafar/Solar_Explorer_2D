@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PJCollectible : GunCollectible
+public class MissileCollectible : GunCollectible
 {
+    public GameObject MissilePrefab;
     private void Start()
     {
         CollectibleSpawnOffset = new Vector2(3, 3);
@@ -19,8 +20,8 @@ public class PJCollectible : GunCollectible
         TheGun = Instantiate(gun, transform.position, transform.rotation);
 
         //Set Up the projectile
-        //Projectile proj = new Projectile();
-        //((ProjectileGun)TheGun).SetProjectile( Projectile);
+        //MissilePrefab = Instantiate(MissilePrefab);
+        ((ProjectileGun)TheGun).SetProjectile(MissilePrefab);
 
         gunController.PickupGunCollectible(this);
     }

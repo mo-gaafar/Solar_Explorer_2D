@@ -10,6 +10,10 @@ public class Missile : Projectile {
         Destroy (gameObject, 5);
     }
 
+    private void Awake()
+    {
+        Debug.Log(" Hello World");
+    }
     public override void Update () {
         float moveSpeed = 10f;
         transform.position += (Vector3) direction * moveSpeed * Time.deltaTime;

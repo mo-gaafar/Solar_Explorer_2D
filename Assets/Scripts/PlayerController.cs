@@ -17,7 +17,7 @@ public class PlayerController : MainController {
         base.Update ();
 
         if (Input.GetButton ("Fire1")) {
-            // Debug.Log ("Fire1");
+            Debug.Log ("Fire1");
             onShoot.Invoke ();
         }
         if (Input.GetButtonUp ("Fire1")) {

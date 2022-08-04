@@ -13,7 +13,7 @@ public abstract class Gun : MonoBehaviour {
     public ShootState shootState = ShootState.Idle;
 
     [SerializeField] protected float damage = 10f;
-    [SerializeField] protected float shootingInterval = 100f;
+    [SerializeField] protected float shootingInterval = 3f;
     [SerializeField] protected float range = 100f;
     [SerializeField] protected float lastShotTime = 0f;
     [SerializeField] protected float impactForce = 30f;

@@ -120,7 +120,6 @@ public class GunController : MonoBehaviour {
         // TODO: add loading bar for switching weapon
 
         // check if inventory only contains one gun
-        Debug.Log("Switch ONNNNN");
         if (_currentShootingState == ShootingState.Switching) {
             Debug.Log ("Already switching");
             return;
