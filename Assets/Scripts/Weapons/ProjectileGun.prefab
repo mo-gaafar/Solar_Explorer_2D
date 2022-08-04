@@ -41,12 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 483944516318837852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b099009a215029c4aba82901b2c9fd9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9aa94c2663a034e44bef6264bd60eeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shootState: 0
   damage: 10
-  shootingInterval: 0.5
+  shootingInterval: 1
   range: 100
   lastShotTime: 0
   impactForce: 30
