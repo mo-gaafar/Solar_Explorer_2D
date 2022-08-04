@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootState: 0
   damage: 10
-  shootingInterval: 100
+  shootingInterval: 1
   range: 100
   lastShotTime: 0
   impactForce: 30
