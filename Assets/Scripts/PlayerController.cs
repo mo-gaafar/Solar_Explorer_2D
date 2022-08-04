@@ -9,6 +9,9 @@ public class PlayerController : MainController {
 
     [SerializeField] private float PickupDetectionRadius = 1f;
 
+    public int CurrentFuel=0;
+    int MaxFuel=1000;
+
     private float vertical = 0; //acc = 1 decel = -1
 
     // Update is called once per frame
@@ -68,5 +71,19 @@ public class PlayerController : MainController {
         base.MoveTowards (mousePos, vertical);
         base.LookAt (mousePos);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Fuel")
+        {
+            CurrentFuel += (other.gameObject.GetComponent<Fuel>()).FuelAmount;
+
+            float fraction = CurrentFuel / MaxFuel;
+            //Call from UI and update it 
+            //TODO: ADD UI UPDATE HERE
+
+            Destroy(other.gameObject);  
+        }
     }
 }
