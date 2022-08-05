@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Upgrade : MonoBehaviour
+public class HealthUpgrade : MonoBehaviour
 {
-    public SpriteRenderer Sr;
-    public Collider2D collider;
-    public GunController gunController;
-    
-
+    // Start is called before the first frame update
     void Start()
     {
         

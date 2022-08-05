@@ -53,7 +53,15 @@ public class Health : MonoBehaviour {
     }
     private void Awake () {
         CameraShake = GameObject.FindGameObjectWithTag ("PlayerCamera").GetComponent<CameraShake> ();
+
     }
+
+    private void Start()
+    {
+        onHealthChanged.Invoke(_health);
+        onMaxHealthChanged.Invoke(_maxHealth);
+    }
+
 
     private void OnEnable () {
         _health = MaxHealth;
@@ -66,7 +74,7 @@ public class Health : MonoBehaviour {
             Heal (heal);
             Debug.Log ("Healing");
         });
-
+        
     }
     public void TakeDamage (float damage) {
         health -= damage;
@@ -76,8 +84,8 @@ public class Health : MonoBehaviour {
 
     }
 
-    public void Heal (float percent) {
-        health = Mathf.Min (health + percent * MaxHealth, MaxHealth);
+    public void Heal (float fraction) {
+        health = Mathf.Min (health + fraction * MaxHealth, MaxHealth);
     }
 
 }

@@ -5,7 +5,18 @@ using UnityEngine;
 public class ProjectileGun : Gun {
 
     [SerializeField] private GameObject pfProjectile;
+    [SerializeField] private int NumberOfProjectiles=1;
+    [SerializeField] private float gunWidth=2f;
 
+    public void AddtoNumberProjectiles(int Addend)
+    {
+        NumberOfProjectiles += Addend;
+    }
+
+    public void AddtoProjectileDamage(int Addend)
+    {
+        damage += Addend;
+    }
     public void SetProjectile(GameObject newProjectile)
     {
         pfProjectile = newProjectile;
@@ -27,22 +38,91 @@ public class ProjectileGun : Gun {
 
     public override void Shoot (Transform firingPoint) {
         Debug.Log ("ProjectileGun Shoot");
-        // Debug.Log ("firingPoint: " + firingPoint.position.x + " " + firingPoint.position.y);
-        Debug.Log (Time.time - lastShotTime);
-        Debug.Log($"Shooting Interval is {shootingInterval}");
 
         if (Time.time - lastShotTime > shootingInterval) {
             lastShotTime = Time.time;
-            Debug.Log("I am not sus ya nasser");
-            GameObject projectile = Instantiate (pfProjectile, firingPoint.position, firingPoint.rotation);
-            Projectile projectileScript = projectile.GetComponent<Projectile>();
-            projectileScript.Setup (projectile.transform.up);
-            projectileScript.SetDamage (damage);
+            if (NumberOfProjectiles == 1)
+            {
+                Debug.Log("SHOOT1");
+                ShootSingle(firingPoint.position, firingPoint.rotation);
+            }
+            else if (NumberOfProjectiles == 2)
+            {
+                Debug.Log ("SHOOT2");
+                Vector2 Offset = new Vector2(0, 0);
+                float magnitude = 0;
+                gunWidth = NumberOfProjectiles;
+                float increment = gunWidth / NumberOfProjectiles;
+                for (int i = 0; i < 2; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        magnitude += increment;
+                        Offset = magnitude * (firingPoint.right);
+                    }
+                    else
+                    {
+                        Offset = -magnitude * (firingPoint.right);
+
+                    }
+
+                    ShootSingle(firingPoint.position + (Vector3)Offset, firingPoint.rotation);
+                }
+            }
+            else
+            {
+                Debug.Log ("SHOOTMORE>2");
+                Vector2 Offset = new Vector2(0, 0);
+                float magnitude = 0;
+                gunWidth = NumberOfProjectiles;
+                float increment = gunWidth / NumberOfProjectiles;
+                int i;
+                for (i = 0; i < NumberOfProjectiles - 1; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        magnitude += increment;
+                        Offset = magnitude * (firingPoint.right);
+                    }
+                    else
+                    {
+                        Offset = -magnitude * (firingPoint.right);
+
+                    }
+
+                    ShootSingle(firingPoint.position + (Vector3)Offset, firingPoint.rotation);
+                }
+
+                if (i % 2 == 1)
+                {
+                    ShootSingle(firingPoint.position, firingPoint.rotation);
+                }
+                else
+                {
+                    magnitude += increment;
+                    Offset = magnitude * (firingPoint.right);
+                    ShootSingle(firingPoint.position + (Vector3)Offset, firingPoint.rotation);
+                }
+
+
+            }
+
         }
     }
 
+    void ShootSingle(Vector3 Position, Quaternion rotation)
+    {
+        GameObject projectile = Instantiate(pfProjectile, Position, rotation);
+        Debug.Log("Before " + projectile.transform.rotation.eulerAngles);
+        //GameObject projectile = Instantiate(pfProjectile, Position, rotation);
+        Projectile projectileScript = projectile.GetComponent<Projectile>();
+        projectileScript.Setup(projectile.transform.up);
+        Debug.Log("After " + projectile.transform.rotation.eulerAngles);
+        projectileScript.SetDamage(damage);
+    }
+
     public override void StopShoot () {
-        Debug.Log ("ProjectileGun StopShoot");
+        //Debug.Log ("ProjectileGun StopShoot");
     }
 
     public override void Reload () {
