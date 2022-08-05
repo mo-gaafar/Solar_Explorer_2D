@@ -31,7 +31,13 @@ public class Heal : Upgrade
 
     void Upgrade()
     {
-        healthcomp.Heal(AddedfractionHealth);
-        Destroy(gameObject);
+        if (healthcomp.Heal(AddedfractionHealth))
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Sr.color = new Color(Sr.color.r, Sr.color.g, Sr.color.b, 0.4f);
+        }
     }
 }

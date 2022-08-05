@@ -84,8 +84,13 @@ public class Health : MonoBehaviour {
 
     }
 
-    public void Heal (float fraction) {
+    public bool Heal (float fraction) {
+        if (health == MaxHealth)
+        {
+            return false;
+        }
         health = Mathf.Min (health + fraction * MaxHealth, MaxHealth);
+        return true;
     }
 
 }
