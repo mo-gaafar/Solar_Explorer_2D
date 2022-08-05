@@ -113,11 +113,9 @@ public class ProjectileGun : Gun {
     void ShootSingle(Vector3 Position, Quaternion rotation)
     {
         GameObject projectile = Instantiate(pfProjectile, Position, rotation);
-        Debug.Log("Before " + projectile.transform.rotation.eulerAngles);
         //GameObject projectile = Instantiate(pfProjectile, Position, rotation);
         Projectile projectileScript = projectile.GetComponent<Projectile>();
         projectileScript.Setup(projectile.transform.up);
-        Debug.Log("After " + projectile.transform.rotation.eulerAngles);
         projectileScript.SetDamage(damage);
     }
 

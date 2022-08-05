@@ -7,8 +7,11 @@ public class LevelManager : MonoBehaviour {
     public float MaxLevelTimeSec = 100f;
     private float currentLevelTime;
     private bool isLevelOver = false;
+    private int CurrentLivingEnemies=0;
+    private int MaxNumberOfEnemies=10;
     public UnityEvent onLevelOver;
     public UnityEvent onLevelStart;
+    public GameObject Enemyspawner;
 
     // Update is called once per frame
     void Update () {
@@ -26,5 +29,11 @@ public class LevelManager : MonoBehaviour {
         int minutes = (int) (remaningTime / 60);
         int seconds = (int) (remaningTime % 60);
         return string.Format ("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void DecreaseLivingEnemies()
+    {
+        CurrentLivingEnemies--;
+        (Enemyspawner.GetComponent< EnemySpawner >()).DecreaseCounter();
     }
 }
