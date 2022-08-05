@@ -9,12 +9,12 @@ public class Missile : Projectile {
     public GameObject HitEffect2;
     public override void Setup (Vector2 direction) {
         this.direction = direction;
-        transform.eulerAngles = new Vector3 (0, 0, Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg);
+        //transform.eulerAngles = new Vector3 (0, 0, Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg);
         Destroy (gameObject, 5);
     }
 
     private void Awake () {
-        Debug.Log (" Hello World");
+        Debug.Log(" Hello World");
     }
     public override void Update () {
         float moveSpeed = 10f;
