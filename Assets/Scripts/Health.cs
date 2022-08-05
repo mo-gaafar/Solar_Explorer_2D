@@ -74,18 +74,25 @@ public class Health : MonoBehaviour {
             Heal (heal);
             Debug.Log ("Healing");
         });
-        
+
+        onDeath.AddListener((GameObject argu)=>{
+
+            Destroy(gameObject);
+        });
+
+
     }
     public void TakeDamage (float damage) {
         health -= damage;
-        // if (health <= 0) {
-        //     Die ();
-        // }
-
     }
 
-    public void Heal (float fraction) {
+    public bool Heal (float fraction) {
+        if (health == MaxHealth)
+        {
+            return false;
+        }
         health = Mathf.Min (health + fraction * MaxHealth, MaxHealth);
+        return true;
     }
 
 }
