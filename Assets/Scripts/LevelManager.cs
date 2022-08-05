@@ -22,8 +22,9 @@ public class LevelManager : MonoBehaviour {
     }
 
     public string GetLevelTimeString () {
-        int minutes = (int) (currentLevelTime / 60);
-        int seconds = (int) (currentLevelTime % 60);
+        int remaningTime = (int) (MaxLevelTimeSec - currentLevelTime);
+        int minutes = (int) (remaningTime / 60);
+        int seconds = (int) (remaningTime % 60);
         return string.Format ("{0:00}:{1:00}", minutes, seconds);
     }
 }

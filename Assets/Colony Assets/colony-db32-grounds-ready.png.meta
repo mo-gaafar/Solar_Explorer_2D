@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -16036,9 +16036,9 @@ TextureImporter:
       colony-db32-grounds-ready_145: 1748947654
       colony-db32-grounds-ready_329: 1113514494
       colony-db32-grounds-ready_41: -352318606
+      colony-db32-grounds-ready_697: 886732102
       colony-db32-grounds-ready_52: -445449942
       colony-db32-grounds-ready_341: -2036261951
-      colony-db32-grounds-ready_697: 886732102
       colony-db32-grounds-ready_703: 1140783488
       colony-db32-grounds-ready_480: -584533855
       colony-db32-grounds-ready_604: 135296793
@@ -16351,8 +16351,8 @@ TextureImporter:
       colony-db32-grounds-ready_382: -78947166
       colony-db32-grounds-ready_218: 999209145
       colony-db32-grounds-ready_282: 1698082290
-      colony-db32-grounds-ready_459: -1797699939
       colony-db32-grounds-ready_616: 1149243300
+      colony-db32-grounds-ready_459: -1797699939
       colony-db32-grounds-ready_116: -1042371247
       colony-db32-grounds-ready_247: -104543849
       colony-db32-grounds-ready_561: -204803272
@@ -16368,10 +16368,10 @@ TextureImporter:
       colony-db32-grounds-ready_219: -755560060
       colony-db32-grounds-ready_657: 316166579
       colony-db32-grounds-ready_330: -1076092583
-      colony-db32-grounds-ready_321: -158712267
+      colony-db32-grounds-ready_611: -2008005691
       colony-db32-grounds-ready_735: 1508388290
       colony-db32-grounds-ready_535: 197368054
-      colony-db32-grounds-ready_611: -2008005691
+      colony-db32-grounds-ready_321: -158712267
       colony-db32-grounds-ready_234: 435244572
       colony-db32-grounds-ready_141: 1290052034
       colony-db32-grounds-ready_497: 28918822
@@ -16379,9 +16379,9 @@ TextureImporter:
       colony-db32-grounds-ready_161: -1188802515
       colony-db32-grounds-ready_326: -500436722
       colony-db32-grounds-ready_244: -2039625431
+      colony-db32-grounds-ready_343: 2002725700
       colony-db32-grounds-ready_126: 770132936
       colony-db32-grounds-ready_550: 1255123082
-      colony-db32-grounds-ready_343: 2002725700
       colony-db32-grounds-ready_692: 1687688004
       colony-db32-grounds-ready_60: -1293614465
       colony-db32-grounds-ready_59: 193021875
@@ -16481,9 +16481,9 @@ TextureImporter:
       colony-db32-grounds-ready_476: -2144407430
       colony-db32-grounds-ready_562: -54986183
       colony-db32-grounds-ready_421: -1919084022
-      colony-db32-grounds-ready_455: 1868872372
       colony-db32-grounds-ready_464: -331771691
       colony-db32-grounds-ready_359: 1039988529
+      colony-db32-grounds-ready_455: 1868872372
       colony-db32-grounds-ready_275: 197868219
       colony-db32-grounds-ready_719: 1029315080
       colony-db32-grounds-ready_568: -379552001

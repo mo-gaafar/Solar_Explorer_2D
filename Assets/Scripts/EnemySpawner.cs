@@ -12,8 +12,12 @@ public class Enemy {
 }
 
 public class EnemySpawner : MonoBehaviour {
-    [SerializeField] public float spawnInterval = 1f;
-    [SerializeField] public float spawnRadius = 10f;
+    [SerializeField] public float SpawnInterval = 1f;
+    [SerializeField] public int MaxEnemies = 10;
+
+    [SerializeField] public float SpawnRadius = 10f;
+    [HideInInspector] private float LastSpawnTime = 0f;
+
     [SerializeField] private Enemy[] enemies;
 
     private double accumulatedWeights;
@@ -26,13 +30,15 @@ public class EnemySpawner : MonoBehaviour {
     // Start is called before the first frame update
     void Start () {
         //for testing purposes
-        for (int i = 0; i < 10; i++) {
-            SpawnRandomEnemy (new Vector2 (Random.Range (-spawnRadius, spawnRadius), Random.Range (-spawnRadius, spawnRadius)));
+        for (int i = 0; i < MaxEnemies; i++) {
+            SpawnRandomEnemy ();
         }
 
     }
 
-    private void SpawnRandomEnemy (Vector2 spawnPosition) {
+    private void SpawnRandomEnemy () {
+        LastSpawnTime = Time.time;
+        Vector2 spawnPosition = new Vector2 (Random.Range (-SpawnRadius, SpawnRadius), Random.Range (-SpawnRadius, SpawnRadius));
         GameObject enemyPrefabs = enemies[GetRandomEnemyIndex ()].Prefab;
 
         Instantiate (enemyPrefabs, spawnPosition, Quaternion.identity);
@@ -59,5 +65,11 @@ public class EnemySpawner : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+        if (SpawnInterval + LastSpawnTime < Time.time) {
+            //TODO: add check for currently alive enemies and max enemies
+            SpawnRandomEnemy ();
+        }
+
     }
+
 }
