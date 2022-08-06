@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 8513822980341112758}
   - component: {fileID: 8513822980341112753}
   - component: {fileID: 8513822980341112752}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: ChargerEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -595,15 +595,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 15
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 13.55
+  m_LinearDrag: 1.7
+  m_AngularDrag: 0.75
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8513822980341112753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 0}
-  maxForce: 5
+  maxForce: 4.21
   onShoot:
     m_PersistentCalls:
       m_Calls: []
@@ -633,8 +633,8 @@ MonoBehaviour:
   onNearbyEnemy:
     m_PersistentCalls:
       m_Calls: []
-  FOLLOW_PLAYER_RANGE: 5.02
-  ATTACK_RANGE: 2.76
+  FOLLOW_PLAYER_RANGE: 7.74
+  ATTACK_RANGE: 3.82
   AttackCooldown: 5
   HitDamage: 30
   Player: {fileID: 0}
@@ -643,7 +643,7 @@ MonoBehaviour:
   AttackTimeStart: 0
   AttackCounter: 0
   AttackTimeCooldown: 2.83
-  CirclingRatePerSec: 0.61
+  CirclingRatePerSec: 0.71
 --- !u!114 &8513822980341112752
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -47,6 +47,7 @@ public abstract class MainController : MonoBehaviour {
 
     //movement 
 
+    //TODO: add rotation offset arg?
     public void LookAt (Vector2 target) {
         Vector2 direction = target - (Vector2) position;
         direction.Normalize ();

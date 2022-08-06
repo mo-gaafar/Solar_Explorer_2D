@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 483944516318837853}
   - component: {fileID: 483944516318837854}
   m_Layer: 0
-  m_Name: ProjectileGun
+  m_Name: MissileGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,8 +48,8 @@ MonoBehaviour:
   damage: 10
   shootingInterval: 1
   range: 100
-  lastShotTime: 25.702076
+  lastShotTime: 0
   impactForce: 30
-  pfProjectile: {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+  pfProjectile: {fileID: 0}
   NumberOfProjectiles: 1
   gunWidth: 2
