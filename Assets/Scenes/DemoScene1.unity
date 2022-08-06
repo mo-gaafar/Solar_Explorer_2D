@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 8320147}
   - component: {fileID: 8320150}
   - component: {fileID: 8320151}
+  - component: {fileID: 8320152}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -379,6 +380,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8320152}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -400,6 +413,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8320152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &10395933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,7 +1236,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 169
+  m_RootOrder: 168
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &30153526
 SpriteRenderer:
@@ -1718,7 +1747,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 146
+  m_RootOrder: 145
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &63951392
 SpriteRenderer:
@@ -2192,7 +2221,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 171
+  m_RootOrder: 170
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &80533660
 SpriteRenderer:
@@ -2596,7 +2625,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 145
+  m_RootOrder: 144
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &89068873
 SpriteRenderer:
@@ -2764,7 +2793,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 158
+  m_RootOrder: 157
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &99380703
 SpriteRenderer:
@@ -4516,6 +4545,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &161572599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 161572600}
+  m_Layer: 0
+  m_Name: endpoint parab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &161572600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161572599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 59.824, y: 15.076, z: -0.24153185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &164798838
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,7 +4828,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 141
+  m_RootOrder: 140
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &185849361
 SpriteRenderer:
@@ -4963,7 +5023,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 143
+  m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &195652863
 SpriteRenderer:
@@ -5394,7 +5454,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 144
+  m_RootOrder: 143
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &216901516
 SpriteRenderer:
@@ -6328,7 +6388,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 148
+  m_RootOrder: 147
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &237039999
 SpriteRenderer:
@@ -7393,7 +7453,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 163
+  m_RootOrder: 162
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &283665929
 SpriteRenderer:
@@ -9595,6 +9655,7 @@ GameObject:
   - component: {fileID: 383432912}
   - component: {fileID: 383432913}
   - component: {fileID: 383432914}
+  - component: {fileID: 383432915}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -9727,6 +9788,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 383432915}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -9748,6 +9821,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &383432915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383432909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &384463041
 GameObject:
   m_ObjectHideFlags: 0
@@ -10425,7 +10514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410507018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.67, y: 14.83, z: 0}
+  m_LocalPosition: {x: 61.04, y: 15.45, z: 0}
   m_LocalScale: {x: 0.58864003, y: 0.50640005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11115,7 +11204,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 162
+  m_RootOrder: 161
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &424624379
 SpriteRenderer:
@@ -11316,7 +11405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425622132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57.749996, y: 15.33, z: -10}
+  m_LocalPosition: {x: 60.44, y: 15.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12043,7 +12132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 167
+  m_RootOrder: 166
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &468164167
 SpriteRenderer:
@@ -12415,7 +12504,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 187
+  m_RootOrder: 186
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &476545283
 SpriteRenderer:
@@ -14634,7 +14723,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 155
+  m_RootOrder: 154
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &549138327
 SpriteRenderer:
@@ -15845,7 +15934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 165
+  m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &575529987
 SpriteRenderer:
@@ -17354,7 +17443,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 191
+  m_RootOrder: 190
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &635757805
 SpriteRenderer:
@@ -17421,6 +17510,7 @@ GameObject:
   - component: {fileID: 637872362}
   - component: {fileID: 637872363}
   - component: {fileID: 637872364}
+  - component: {fileID: 637872365}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -17553,6 +17643,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 637872365}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -17574,6 +17676,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &637872365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637872359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &643130691
 GameObject:
   m_ObjectHideFlags: 0
@@ -17742,7 +17860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643130691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57.749996, y: 15.33, z: 0}
+  m_LocalPosition: {x: 60.44, y: 15.2, z: 0}
   m_LocalScale: {x: 0.6974, y: -0.6821, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17775,8 +17893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2931df1cde83e5a4cb9c404f1d0e1e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _health: 100
+  _maxHealth: 200
+  _health: 200
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -18447,7 +18565,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 170
+  m_RootOrder: 169
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &672006427
 SpriteRenderer:
@@ -19553,90 +19671,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &716027453
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 716027454}
-  - component: {fileID: 716027455}
-  m_Layer: 0
-  m_Name: colony-db3_54 (49)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &716027454
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716027453}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72.83214, y: 29.550762, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1505961324}
-  m_RootOrder: 139
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &716027455
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716027453}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -2
-  m_Sprite: {fileID: 927986694, guid: dfddff533b60c104e9fe9906316a0ab1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.28125, y: 0.25}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &717299026
 GameObject:
   m_ObjectHideFlags: 0
@@ -20279,7 +20313,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 153
+  m_RootOrder: 152
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &751191785
 SpriteRenderer:
@@ -21094,7 +21128,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 178
+  m_RootOrder: 177
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &794910110
 SpriteRenderer:
@@ -21346,7 +21380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 157
+  m_RootOrder: 156
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &800631145
 SpriteRenderer:
@@ -21541,7 +21575,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 177
+  m_RootOrder: 176
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &800988412
 SpriteRenderer:
@@ -22526,6 +22560,7 @@ GameObject:
   - component: {fileID: 829123091}
   - component: {fileID: 829123094}
   - component: {fileID: 829123095}
+  - component: {fileID: 829123096}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -22658,6 +22693,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 829123096}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -22679,6 +22726,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &829123096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829123090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &836632772
 GameObject:
   m_ObjectHideFlags: 0
@@ -22988,7 +23051,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 173
+  m_RootOrder: 172
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &848551855
 SpriteRenderer:
@@ -23600,7 +23663,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 152
+  m_RootOrder: 151
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &882557633
 SpriteRenderer:
@@ -23862,6 +23925,7 @@ GameObject:
   - component: {fileID: 889198931}
   - component: {fileID: 889198932}
   - component: {fileID: 889198933}
+  - component: {fileID: 889198934}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -23994,6 +24058,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 889198934}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -24015,6 +24091,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &889198934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889198928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &891342120
 GameObject:
   m_ObjectHideFlags: 0
@@ -24462,7 +24554,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 160
+  m_RootOrder: 159
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &902570374
 SpriteRenderer:
@@ -24768,7 +24860,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 164
+  m_RootOrder: 163
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &928699169
 SpriteRenderer:
@@ -25242,7 +25334,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 192
+  m_RootOrder: 191
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &958479274
 SpriteRenderer:
@@ -27419,7 +27511,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 181
+  m_RootOrder: 180
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1019708163
 SpriteRenderer:
@@ -29613,7 +29705,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 166
+  m_RootOrder: 165
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1127826155
 SpriteRenderer:
@@ -30060,7 +30152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 172
+  m_RootOrder: 171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1135043530
 SpriteRenderer:
@@ -30420,6 +30512,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1155552439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1155552440}
+  m_Layer: 0
+  m_Name: startpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1155552440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155552439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.269, y: 15.335, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156646951
 GameObject:
   m_ObjectHideFlags: 0
@@ -30450,7 +30573,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 182
+  m_RootOrder: 181
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1156646953
 SpriteRenderer:
@@ -30618,7 +30741,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 176
+  m_RootOrder: 175
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1159914820
 SpriteRenderer:
@@ -31213,7 +31336,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 154
+  m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1180646620
 SpriteRenderer:
@@ -32816,7 +32939,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 175
+  m_RootOrder: 174
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1220374049
 SpriteRenderer:
@@ -34877,7 +35000,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 151
+  m_RootOrder: 150
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1294242880
 SpriteRenderer:
@@ -35799,7 +35922,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 180
+  m_RootOrder: 179
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1331999319
 SpriteRenderer:
@@ -35980,7 +36103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1338075904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36641,6 +36764,7 @@ GameObject:
   - component: {fileID: 1365933778}
   - component: {fileID: 1365933779}
   - component: {fileID: 1365933780}
+  - component: {fileID: 1365933781}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -36773,6 +36897,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1365933781}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -36794,6 +36930,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1365933781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365933775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &1367325287
 GameObject:
   m_ObjectHideFlags: 0
@@ -37710,7 +37862,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 161
+  m_RootOrder: 160
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1416614463
 SpriteRenderer:
@@ -38682,6 +38834,7 @@ GameObject:
   - component: {fileID: 1452413769}
   - component: {fileID: 1452413772}
   - component: {fileID: 1452413773}
+  - component: {fileID: 1452413774}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -38814,6 +38967,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1452413774}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -38835,6 +39000,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1452413774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452413768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &1453866030
 GameObject:
   m_ObjectHideFlags: 0
@@ -39177,7 +39358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456266490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.44, y: 15.209999, z: 0}
+  m_LocalPosition: {x: 59.461, y: 17.331, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39325,7 +39506,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 190
+  m_RootOrder: 189
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1456711376
 SpriteRenderer:
@@ -39503,6 +39684,7 @@ GameObject:
   - component: {fileID: 1462183251}
   - component: {fileID: 1462183252}
   - component: {fileID: 1462183253}
+  - component: {fileID: 1462183254}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -39635,6 +39817,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1462183254}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -39656,6 +39850,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1462183254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462183248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &1464443285
 GameObject:
   m_ObjectHideFlags: 0
@@ -39686,7 +39896,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 186
+  m_RootOrder: 185
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1464443287
 SpriteRenderer:
@@ -40675,7 +40885,6 @@ Transform:
   - {fileID: 1684363291}
   - {fileID: 289112141}
   - {fileID: 76389757}
-  - {fileID: 716027454}
   - {fileID: 1789124881}
   - {fileID: 185849360}
   - {fileID: 1988821173}
@@ -41569,7 +41778,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 188
+  m_RootOrder: 187
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1540016373
 SpriteRenderer:
@@ -41636,6 +41845,7 @@ GameObject:
   - component: {fileID: 1541650184}
   - component: {fileID: 1541650185}
   - component: {fileID: 1541650186}
+  - component: {fileID: 1541650187}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -41768,6 +41978,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1541650187}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -41789,6 +42011,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1541650187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541650181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &1551014181
 GameObject:
   m_ObjectHideFlags: 0
@@ -42404,7 +42642,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 183
+  m_RootOrder: 182
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1588486000
 SpriteRenderer:
@@ -42488,7 +42726,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 193
+  m_RootOrder: 192
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1590072254
 SpriteRenderer:
@@ -45032,7 +45270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 179
+  m_RootOrder: 178
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1671283194
 SpriteRenderer:
@@ -46132,7 +46370,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 159
+  m_RootOrder: 158
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1715974502
 SpriteRenderer:
@@ -46327,7 +46565,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 147
+  m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1733038565
 SpriteRenderer:
@@ -47243,7 +47481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764793158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.749996, y: 15.33, z: -10}
+  m_LocalPosition: {x: 60.44, y: 15.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47540,7 +47778,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 140
+  m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1789124882
 SpriteRenderer:
@@ -48236,7 +48474,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 149
+  m_RootOrder: 148
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1825392995
 SpriteRenderer:
@@ -48320,7 +48558,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 174
+  m_RootOrder: 173
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1838499627
 SpriteRenderer:
@@ -48777,6 +49015,7 @@ GameObject:
   - component: {fileID: 1848228383}
   - component: {fileID: 1848228384}
   - component: {fileID: 1848228385}
+  - component: {fileID: 1848228386}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -48909,6 +49148,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1848228386}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -48930,6 +49181,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1848228386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848228380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &1848828715
 GameObject:
   m_ObjectHideFlags: 0
@@ -50652,7 +50919,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 150
+  m_RootOrder: 149
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1923274926
 SpriteRenderer:
@@ -51167,7 +51434,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 185
+  m_RootOrder: 184
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1935767015
 SpriteRenderer:
@@ -51557,7 +51824,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 189
+  m_RootOrder: 188
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1960446669
 SpriteRenderer:
@@ -52031,7 +52298,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 142
+  m_RootOrder: 141
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1988821174
 SpriteRenderer:
@@ -53447,6 +53714,7 @@ GameObject:
   - component: {fileID: 2031469324}
   - component: {fileID: 2031469325}
   - component: {fileID: 2031469326}
+  - component: {fileID: 2031469327}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -53579,6 +53847,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2031469327}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -53600,6 +53880,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2031469327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
 --- !u!1 &2033184020
 GameObject:
   m_ObjectHideFlags: 0
@@ -53825,7 +54121,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 168
+  m_RootOrder: 167
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2039316968
 SpriteRenderer:
@@ -55012,7 +55308,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 156
+  m_RootOrder: 155
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2074901783
 SpriteRenderer:
@@ -55193,7 +55489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2082369523
 Transform:
   m_ObjectHideFlags: 0
@@ -56093,7 +56389,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1505961324}
-  m_RootOrder: 184
+  m_RootOrder: 183
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2120332844
 SpriteRenderer:
@@ -56453,3 +56749,186 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2075736219354968482
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_Name
+      value: rock-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 54.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075736219390384715, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+--- !u!1001 &3084010316654317651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_Name
+      value: rock-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084010317463442860, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+--- !u!1001 &5094447103783384001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_Name
+      value: rock-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 55.581932
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.098433
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094447102918249160, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}

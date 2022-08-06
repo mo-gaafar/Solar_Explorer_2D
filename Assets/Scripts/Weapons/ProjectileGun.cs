@@ -37,7 +37,7 @@ public class ProjectileGun : Gun {
     }
 
     public override void Shoot (Transform firingPoint) {
-        Debug.Log ("ProjectileGun Shoot");
+        //Debug.Log ("ProjectileGun Shoot");
 
         if (Time.time - lastShotTime > shootingInterval) {
             lastShotTime = Time.time;

@@ -14,7 +14,7 @@ public class Missile : Projectile {
     }
 
     private void Awake () {
-        Debug.Log(" Hello World");
+
     }
     public override void Update () {
         float moveSpeed = 10f;
