@@ -429,6 +429,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &10395933
 GameObject:
   m_ObjectHideFlags: 0
@@ -9837,6 +9839,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &384463041
 GameObject:
   m_ObjectHideFlags: 0
@@ -17692,6 +17696,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &643130691
 GameObject:
   m_ObjectHideFlags: 0
@@ -17893,8 +17899,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2931df1cde83e5a4cb9c404f1d0e1e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 200
-  _health: 200
+  _maxHealth: 100
+  _health: 100
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -21191,15 +21197,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4731229673023350976, guid: 299c35d692c1c7943bd357adc0352e61, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4731229673023350976, guid: 299c35d692c1c7943bd357adc0352e61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.87
+      value: 62.11
       objectReference: {fileID: 0}
     - target: {fileID: 4731229673023350976, guid: 299c35d692c1c7943bd357adc0352e61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.24
+      value: 15.73
       objectReference: {fileID: 0}
     - target: {fileID: 4731229673023350976, guid: 299c35d692c1c7943bd357adc0352e61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22742,6 +22748,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &836632772
 GameObject:
   m_ObjectHideFlags: 0
@@ -24107,6 +24115,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &891342120
 GameObject:
   m_ObjectHideFlags: 0
@@ -36946,6 +36956,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1367325287
 GameObject:
   m_ObjectHideFlags: 0
@@ -39016,6 +39028,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1453866030
 GameObject:
   m_ObjectHideFlags: 0
@@ -39363,7 +39377,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1456393185
 GameObject:
@@ -39866,6 +39880,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1464443285
 GameObject:
   m_ObjectHideFlags: 0
@@ -42027,6 +42043,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0.2
+  MaxOffset: 1
 --- !u!1 &1551014181
 GameObject:
   m_ObjectHideFlags: 0
@@ -47364,12 +47382,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753456070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.88, y: 16.009998, z: 0}
+  m_LocalPosition: {x: 56.39, y: 15.47, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753873288
 GameObject:
@@ -49197,6 +49215,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1848828715
 GameObject:
   m_ObjectHideFlags: 0
@@ -53896,6 +53916,8 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &2033184020
 GameObject:
   m_ObjectHideFlags: 0

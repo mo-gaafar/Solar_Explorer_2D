@@ -24,7 +24,8 @@ public class Debris : MonoBehaviour
     public void SetStart_End(Vector2 Vec,Vector2 Vec2)
     {
         StartPoint = Vec;
-        TrajEndPoint = Vec;
+        TrajEndPoint = Vec2;
+        Debug.Log("TrajEnd is " + TrajEndPoint);
     }
 
 

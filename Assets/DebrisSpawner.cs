@@ -7,10 +7,12 @@ public class DebrisSpawner : MonoBehaviour
     BoxCollider2D BuildingCollider;
     Vector2 StartPoint;
     Vector2 EndPoint;
-    Vector2 Offset1;
-    Vector2 Offset2;
+    Vector2 Range1;
+    Vector2 Range2;
     public List<GameObject> Debris;
     GameObject CurrentDebris;
+    [SerializeField] float MinOffset=0.2f;
+    [SerializeField] float MaxOffset=1;
 
     void Start()
     {
@@ -47,34 +49,33 @@ public class DebrisSpawner : MonoBehaviour
     //Randomize Start point inside the collider
     void RandomizeStart()
     {
-        StartPoint = (Vector2)transform.position
-        + new Vector2(Random.Range(BuildingCollider.bounds.min.x, BuildingCollider.bounds.max.x) - transform.position.x
-        , Random.Range(BuildingCollider.bounds.min.y, BuildingCollider.bounds.max.y) - transform.position.y);
+        StartPoint = new Vector2(Random.Range(BuildingCollider.bounds.min.x, BuildingCollider.bounds.max.x)
+        , Random.Range(BuildingCollider.bounds.min.y, BuildingCollider.bounds.max.y));
     }
 
     //El end 3awzeeno 0.2 b3d bounds el collider l8ayet 1
     void RandomizeEnd()
     {
         EndPoint = (Vector2)transform.position;
-        Offset1 = new Vector2(Random.Range(BuildingCollider.bounds.max.x+0.2f, BuildingCollider.bounds.max.x+1f)
-        , Random.Range(BuildingCollider.bounds.min.y-1f, BuildingCollider.bounds.max.y+1f));
+        Range1 = new Vector2(Random.Range(BuildingCollider.bounds.max.x+ MinOffset, BuildingCollider.bounds.max.x+ MaxOffset)
+        , Random.Range(BuildingCollider.bounds.min.y- MaxOffset, BuildingCollider.bounds.max.y+ MaxOffset));
 
-        //Randomly flip around the line of symmetry (center)
-        if (Random.value > 0.5) 
-            Offset1.x = EndPoint.x - (Offset1.x- EndPoint.x);
-        
-        Offset2 = new Vector2(Random.Range(BuildingCollider.bounds.min.x - 1f, BuildingCollider.bounds.max.x + 1f)
-       , Random.Range(BuildingCollider.bounds.max.y + 0.2f, BuildingCollider.bounds.max.y + 1f));
+        //Randomly flip around the line of symmetry(center)
+        if (Random.value > 0.5)
+            Range1.x = EndPoint.x - (Range1.x - EndPoint.x);
 
-         if (Random.value > 0.5) 
-            Offset2.y = EndPoint.y -(Offset2.y - EndPoint.y);
-        
-        if(Random.value > 0.5)
+        Range2 = new Vector2(Random.Range(BuildingCollider.bounds.min.x - MaxOffset, BuildingCollider.bounds.max.x + MaxOffset)
+       , Random.Range(BuildingCollider.bounds.max.y + MinOffset, BuildingCollider.bounds.max.y + MaxOffset));
+
+        if (Random.value > 0.5)
+            Range2.y = EndPoint.y - (Range2.y - EndPoint.y);
+
+        if (Random.value > 0.5)
         {
-            Offset1 = Offset2;
+            Range1 = Range2;
         }
 
-        EndPoint = EndPoint + Offset1;
+        EndPoint = Range1;
 
     }
 }
