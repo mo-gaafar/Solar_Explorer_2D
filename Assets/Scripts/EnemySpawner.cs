@@ -13,32 +13,42 @@ public class Enemy {
 
 public class EnemySpawner : MonoBehaviour {
     [SerializeField] public float SpawnInterval = 1f;
-    [SerializeField] public int MaxEnemies = 10;
+    [SerializeField] public static int MaxEnemies = 10;
+    [SerializeField] public static int EnemyCounter= 0;
+
 
     [SerializeField] public float SpawnRadius = 10f;
     [HideInInspector] private float LastSpawnTime = 0f;
 
     [SerializeField] private Enemy[] enemies;
 
+    [SerializeField] private Vector2 CenterPoint;
+
     private double accumulatedWeights;
     private System.Random rand = new System.Random ();
 
+    public void DecreaseCounter()
+    {
+        EnemyCounter--;
+    }
     private void Awake () {
+        CenterPoint = transform.position;
         CalculateWeights ();
     }
 
     // Start is called before the first frame update
     void Start () {
         //for testing purposes
-        for (int i = 0; i < MaxEnemies; i++) {
-            SpawnRandomEnemy ();
-        }
+        //for (int i = 0; i < MaxEnemies; i++) {
+        //    SpawnRandomEnemy ();
+        //    EnemyCounter++;
+        //}
 
     }
 
     private void SpawnRandomEnemy () {
         LastSpawnTime = Time.time;
-        Vector2 spawnPosition = new Vector2 (Random.Range (-SpawnRadius, SpawnRadius), Random.Range (-SpawnRadius, SpawnRadius));
+        Vector2 spawnPosition = new Vector2 (CenterPoint.x+Random.Range (-SpawnRadius, SpawnRadius), CenterPoint.y + Random.Range (-SpawnRadius, SpawnRadius));
         GameObject enemyPrefabs = enemies[GetRandomEnemyIndex ()].Prefab;
 
         Instantiate (enemyPrefabs, spawnPosition, Quaternion.identity);
@@ -67,7 +77,11 @@ public class EnemySpawner : MonoBehaviour {
 
         if (SpawnInterval + LastSpawnTime < Time.time) {
             //TODO: add check for currently alive enemies and max enemies
-            SpawnRandomEnemy ();
+            if (EnemyCounter < MaxEnemies)
+            {
+                SpawnRandomEnemy ();
+                EnemyCounter++;
+            }
         }
 
     }

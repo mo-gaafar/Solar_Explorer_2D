@@ -9,6 +9,7 @@ public class CameraShake : MonoBehaviour
     CinemachineBasicMultiChannelPerlin CBMP;
     float shakertimer = 1;
     float varyingdecrement = 0;
+    int MaxAmplitude=5;
     private void Awake()
     {
         cinemachineVirtualCamera = gameObject.GetComponent<CinemachineVirtualCamera>();
@@ -19,9 +20,9 @@ public class CameraShake : MonoBehaviour
     {
         CBMP.m_AmplitudeGain += 1.5f;
         Debug.Log("Amp is " + CBMP.m_AmplitudeGain);
-        if (CBMP.m_AmplitudeGain >= 12)
+        if (CBMP.m_AmplitudeGain >= MaxAmplitude)
         {
-            CBMP.m_AmplitudeGain = 12;
+            CBMP.m_AmplitudeGain = MaxAmplitude;
         }
         shakertimer = Mathf.Min(7, shakertimer + 1);
         varyingdecrement = 0;
