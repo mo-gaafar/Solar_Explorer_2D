@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour {
     private void OnTriggerEnter2D (Collider2D other) {
         if (other.gameObject.name == "Player") {
             Interact ();
+            Destroy (gameObject);
         }
     }
 }
