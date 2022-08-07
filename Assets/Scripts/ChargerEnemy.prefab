@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 8513822980341112758}
   - component: {fileID: 8513822980341112753}
   - component: {fileID: 8513822980341112752}
+  - component: {fileID: 109564895910164127}
   m_Layer: 8
   m_Name: ChargerEnemy
   m_TagString: Enemy
@@ -637,7 +638,6 @@ MonoBehaviour:
   ATTACK_RANGE: 3.82
   DamagePerSecond: 37.98
   AttackCooldown: 5
-  HitDamage: 30
   Player: {fileID: 0}
   HomePosition: {x: 0, y: 0}
   PlayerDistance: 100
@@ -661,7 +661,19 @@ MonoBehaviour:
   _health: 40
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 109564895910164127}
+        m_TargetAssemblyTypeName: EnemyDrop, Assembly-CSharp
+        m_MethodName: GenerateSlime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -698,6 +710,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &109564895910164127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8513822980341112763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d1a4136bd4802488dba5ee123250d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slime: {fileID: 8035475965805210044, guid: c97ab4c79af25034db535fb95ce42797, type: 3}
 --- !u!1 &8513822980388172228
 GameObject:
   m_ObjectHideFlags: 0
