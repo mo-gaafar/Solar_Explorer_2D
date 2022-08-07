@@ -13,13 +13,13 @@ public class ChargerEnemyController : MainController {
 
     public float FOLLOW_PLAYER_RANGE = EnemyDetectionRadius * 0.9f;
     public float ATTACK_RANGE = EnemyDetectionRadius * 0.5f;
+    [SerializeField] public float DamagePerSecond = 10f;
     [SerializeField] public int AttackCooldown = 3;
-    [SerializeField] public float HitDamage = 10f;
 
-    public GameObject Player;
-    public Vector2 HomePosition;
-    public float PlayerDistance = 100f;
-    public float AttackTimeStart = 0f;
+    [HideInInspector] public GameObject Player;
+    [HideInInspector] public Vector2 HomePosition;
+    [HideInInspector] public float PlayerDistance = 100f;
+    [HideInInspector] public float AttackTimeStart = 0f;
     public float AttackCounter = 0f;
     public float AttackTimeCooldown = 1f;
 
@@ -66,6 +66,10 @@ public class ChargerEnemyController : MainController {
     }
 
     public void OnCollisionEnter2D (Collision2D other) {
+        //quick fix for damage per second
+        if (other.gameObject.tag == "Player") {
+            other.collider.GetComponent<Health> ().onHit.Invoke (DamagePerSecond * Time.deltaTime);
+        }
         currentState.OnCollisionEnter2D (this, other);
     }
 }

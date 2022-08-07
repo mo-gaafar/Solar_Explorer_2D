@@ -635,6 +635,7 @@ MonoBehaviour:
       m_Calls: []
   FOLLOW_PLAYER_RANGE: 7.74
   ATTACK_RANGE: 3.82
+  DamagePerSecond: 37.98
   AttackCooldown: 5
   HitDamage: 30
   Player: {fileID: 0}

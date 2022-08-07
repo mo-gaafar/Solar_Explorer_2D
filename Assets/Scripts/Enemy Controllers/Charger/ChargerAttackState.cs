@@ -23,7 +23,7 @@ public class ChargerAttackState : ChargerBaseState {
     }
     public void OnCollisionEnter2D (ChargerEnemyController controller, Collision2D other) {
         if (other.gameObject.tag == "Player") {
-            other.gameObject.GetComponent<Health> ().onHit.Invoke (controller.HitDamage);
+            other.gameObject.GetComponent<Health> ().onHit.Invoke (controller.DamagePerSecond * Time.deltaTime);
             controller.SwitchState (controller.ChargerGoAroundState);
             //TODO: Add a knockback effect to the player
             //TODO: what if the player dies??

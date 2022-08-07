@@ -66,7 +66,7 @@ public class Health : MonoBehaviour {
         // _health = MaxHealth;
         onHit.AddListener ((float damage) => {
             TakeDamage (damage);
-            CameraShake.Shake ();
+            // CameraShake.Shake ();
         });
         onHeal.AddListener ((float heal) => {
             Heal (heal);
