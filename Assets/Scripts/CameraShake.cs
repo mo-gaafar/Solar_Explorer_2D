@@ -16,8 +16,14 @@ public class CameraShake : MonoBehaviour {
 
     public void Shake () {
         CBMP.m_AmplitudeGain += 1.5f;
+<<<<<<< HEAD
         // Debug.Log("Amp is " + CBMP.m_AmplitudeGain);
         if (CBMP.m_AmplitudeGain >= MaxAmplitude) {
+=======
+        //Debug.Log("Amp is " + CBMP.m_AmplitudeGain);
+        if (CBMP.m_AmplitudeGain >= MaxAmplitude)
+        {
+>>>>>>> origin/JoTany
             CBMP.m_AmplitudeGain = MaxAmplitude;
         }
         shakertimer = Mathf.Min (7, shakertimer + 1);
@@ -34,7 +40,10 @@ public class CameraShake : MonoBehaviour {
             if (CBMP.m_AmplitudeGain <= 0) {
                 CBMP.m_AmplitudeGain = 0;
             }
+<<<<<<< HEAD
             // Debug.Log("Amp is " + CBMP.m_AmplitudeGain);
+=======
+>>>>>>> origin/JoTany
         }
         //if(shakertimer == 0)
         //{

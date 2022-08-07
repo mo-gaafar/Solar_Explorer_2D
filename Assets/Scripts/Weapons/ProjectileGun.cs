@@ -37,21 +37,19 @@ public class ProjectileGun : Gun {
     }
 
     public override void Shoot (Transform firingPoint) {
-        Debug.Log ("ProjectileGun Shoot");
+        //Debug.Log ("ProjectileGun Shoot");
 
         if (Time.time - lastShotTime > shootingInterval) {
             lastShotTime = Time.time;
             if (NumberOfProjectiles == 1)
             {
-                Debug.Log("SHOOT1");
                 ShootSingle(firingPoint.position, firingPoint.rotation);
             }
             else if (NumberOfProjectiles == 2)
             {
-                Debug.Log ("SHOOT2");
                 Vector2 Offset = new Vector2(0, 0);
                 float magnitude = 0;
-                gunWidth = NumberOfProjectiles;
+                gunWidth = 1f;
                 float increment = gunWidth / NumberOfProjectiles;
                 for (int i = 0; i < 2; i++)
                 {
@@ -71,10 +69,9 @@ public class ProjectileGun : Gun {
             }
             else
             {
-                Debug.Log ("SHOOTMORE>2");
                 Vector2 Offset = new Vector2(0, 0);
                 float magnitude = 0;
-                gunWidth = NumberOfProjectiles;
+                gunWidth = NumberOfProjectiles-0.5f;
                 float increment = gunWidth / NumberOfProjectiles;
                 int i;
                 for (i = 0; i < NumberOfProjectiles - 1; i++)

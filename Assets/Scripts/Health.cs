@@ -69,7 +69,6 @@ public class Health : MonoBehaviour {
         onHit.AddListener ((float damage) => {
             TakeDamage (damage);
             CameraShake.Shake ();
-            Debug.Log ("Damaging");
         });
         onHeal.AddListener ((float heal) => {
             Heal (heal);
