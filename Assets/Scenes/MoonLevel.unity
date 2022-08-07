@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 8320147}
   - component: {fileID: 8320150}
   - component: {fileID: 8320151}
+  - component: {fileID: 8320152}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -400,6 +401,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8320152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &10395933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2590,7 +2609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88716539}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.0000028461216}
-  m_LocalPosition: {x: 0, y: -0.5600004, z: 0}
+  m_LocalPosition: {x: 0, y: 0.88, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6375,6 +6394,9 @@ GameObject:
   - component: {fileID: 236672946}
   - component: {fileID: 236672948}
   - component: {fileID: 236672947}
+  - component: {fileID: 236672951}
+  - component: {fileID: 236672950}
+  - component: {fileID: 236672949}
   m_Layer: 5
   m_Name: TasksButton
   m_TagString: Untagged
@@ -6441,6 +6463,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236672945}
   m_CullTransparentMesh: 1
+--- !u!114 &236672949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236672945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &236672950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236672945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &236672951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236672945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 236672947}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &237039997
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,7 +8217,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 243700613}
   m_HandleRect: {fileID: 492121414}
@@ -9613,6 +9713,7 @@ GameObject:
   - component: {fileID: 383432912}
   - component: {fileID: 383432913}
   - component: {fileID: 383432914}
+  - component: {fileID: 383432915}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -9766,6 +9867,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &383432915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383432909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &384463041
 GameObject:
   m_ObjectHideFlags: 0
@@ -11518,7 +11637,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 349473403}
   m_HandleRect: {fileID: 1743198965}
@@ -17439,6 +17558,7 @@ GameObject:
   - component: {fileID: 637872362}
   - component: {fileID: 637872363}
   - component: {fileID: 637872364}
+  - component: {fileID: 637872365}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -17592,6 +17712,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &637872365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637872359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &643130691
 GameObject:
   m_ObjectHideFlags: 0
@@ -17794,7 +17932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _health: 100
+  _health: 20
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -22605,6 +22743,7 @@ GameObject:
   - component: {fileID: 829123091}
   - component: {fileID: 829123094}
   - component: {fileID: 829123095}
+  - component: {fileID: 829123096}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -22758,6 +22897,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &829123096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829123090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &836632772
 GameObject:
   m_ObjectHideFlags: 0
@@ -23941,6 +24098,7 @@ GameObject:
   - component: {fileID: 889198931}
   - component: {fileID: 889198932}
   - component: {fileID: 889198933}
+  - component: {fileID: 889198934}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -24094,6 +24252,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &889198934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889198928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &891342120
 GameObject:
   m_ObjectHideFlags: 0
@@ -24722,7 +24898,7 @@ GameObject:
   - component: {fileID: 911130317}
   m_Layer: 8
   m_Name: turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31833,7 +32009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191016646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6, y: 13.2, z: 0}
+  m_LocalPosition: {x: 12.04, y: 17.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37012,6 +37188,7 @@ GameObject:
   - component: {fileID: 1365933778}
   - component: {fileID: 1365933779}
   - component: {fileID: 1365933780}
+  - component: {fileID: 1365933781}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -37165,6 +37342,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1365933781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365933775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1367325287
 GameObject:
   m_ObjectHideFlags: 0
@@ -39308,6 +39503,7 @@ GameObject:
   - component: {fileID: 1452413769}
   - component: {fileID: 1452413772}
   - component: {fileID: 1452413773}
+  - component: {fileID: 1452413774}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -39461,6 +39657,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1452413774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452413768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1453866030
 GameObject:
   m_ObjectHideFlags: 0
@@ -40002,6 +40216,7 @@ GameObject:
   - component: {fileID: 1462183251}
   - component: {fileID: 1462183252}
   - component: {fileID: 1462183253}
+  - component: {fileID: 1462183254}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -40049,7 +40264,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1534000873, guid: ad2b739c166da834ba11f190e424adaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -40155,6 +40370,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1462183254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462183248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 4097891277083010511, guid: 1f35c7622a8c2d346bed37279d58e5d9, type: 3}
+  - {fileID: 1094238210601792300, guid: fe3b3d257af271a419dd452ee3eacc22, type: 3}
+  - {fileID: 4619285337548936057, guid: a73c27815edc52340af9fb2cdf8aa2c5, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1464443285
 GameObject:
   m_ObjectHideFlags: 0
@@ -42135,6 +42368,7 @@ GameObject:
   - component: {fileID: 1541650184}
   - component: {fileID: 1541650185}
   - component: {fileID: 1541650186}
+  - component: {fileID: 1541650187}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -42288,6 +42522,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1541650187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541650181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1551014181
 GameObject:
   m_ObjectHideFlags: 0
@@ -46270,6 +46522,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1691468687
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_Name
+      value: MissilePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7355
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180817024497234046, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
 --- !u!1 &1694191218
 GameObject:
   m_ObjectHideFlags: 0
@@ -49111,6 +49424,7 @@ GameObject:
   - component: {fileID: 1848228383}
   - component: {fileID: 1848228384}
   - component: {fileID: 1848228385}
+  - component: {fileID: 1848228386}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -49158,7 +49472,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1703138056, guid: ad2b739c166da834ba11f190e424adaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -49264,6 +49578,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1848228386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848228380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 4097891277083010511, guid: 1f35c7622a8c2d346bed37279d58e5d9, type: 3}
+  - {fileID: 1094238210601792300, guid: fe3b3d257af271a419dd452ee3eacc22, type: 3}
+  - {fileID: 4619285337548936057, guid: a73c27815edc52340af9fb2cdf8aa2c5, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &1848828715
 GameObject:
   m_ObjectHideFlags: 0
@@ -53539,7 +53871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025489195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.700932, y: 10.58941, z: 0}
+  m_LocalPosition: {x: 27.45, y: 13.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53865,6 +54197,7 @@ GameObject:
   - component: {fileID: 2031469324}
   - component: {fileID: 2031469325}
   - component: {fileID: 2031469326}
+  - component: {fileID: 2031469327}
   m_Layer: 0
   m_Name: building
   m_TagString: Obstacle
@@ -54018,6 +54351,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c5f322c2f6a8f47bcb6016c2367f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2031469327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031469321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a7b375a9c4a6d4aa2cb3768cf7d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  MinOffset: 0
+  MaxOffset: 0
 --- !u!1 &2033184020
 GameObject:
   m_ObjectHideFlags: 0

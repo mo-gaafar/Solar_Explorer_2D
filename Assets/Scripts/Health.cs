@@ -14,7 +14,7 @@ public class Health : MonoBehaviour {
     public UnityEvent<float> onHeal;
     public UnityEvent<float> onHealthChanged;
     public UnityEvent<float> onMaxHealthChanged;
-    
+
     LevelManager Levelmanager;
     public float health {
         get {
@@ -54,18 +54,16 @@ public class Health : MonoBehaviour {
     }
     private void Awake () {
         CameraShake = GameObject.FindGameObjectWithTag ("PlayerCamera").GetComponent<CameraShake> ();
-        Levelmanager= GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        Levelmanager = GameObject.Find ("LevelManager").GetComponent<LevelManager> ();
     }
 
-    private void Start()
-    {
-        onHealthChanged.Invoke(_health);
-        onMaxHealthChanged.Invoke(_maxHealth);
+    private void Start () {
+        onHealthChanged.Invoke (_health);
+        onMaxHealthChanged.Invoke (_maxHealth);
     }
-
 
     private void OnEnable () {
-        _health = MaxHealth;
+        // _health = MaxHealth;
         onHit.AddListener ((float damage) => {
             TakeDamage (damage);
             CameraShake.Shake ();
@@ -75,14 +73,12 @@ public class Health : MonoBehaviour {
             Debug.Log ("Healing");
         });
 
-        onDeath.AddListener((GameObject argu)=>{
-            if (argu.GetComponent<MainController>())
-            {
-                Levelmanager.DecreaseLivingEnemies();
+        onDeath.AddListener ((GameObject argu) => {
+            if (argu.GetComponent<MainController> ()) {
+                Levelmanager.DecreaseLivingEnemies ();
             }
-            Destroy(gameObject);
+            Destroy (gameObject);
         });
-
 
     }
     public void TakeDamage (float damage) {
@@ -90,8 +86,7 @@ public class Health : MonoBehaviour {
     }
 
     public bool Heal (float fraction) {
-        if (health == MaxHealth)
-        {
+        if (health == MaxHealth) {
             return false;
         }
         health = Mathf.Min (health + fraction * MaxHealth, MaxHealth);
