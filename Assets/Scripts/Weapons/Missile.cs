@@ -39,7 +39,7 @@ public class Missile : Projectile {
         if (other.gameObject.tag == "Obstacle") {
             // Debug.Log ("Hit wall");
         }
-
+        gameObject.GetComponent<AudioSource>().Play();
         GameObject lol = Instantiate (HitEffect1, transform.position, transform.rotation);
         lol = Instantiate (HitEffect2, transform.position, transform.rotation);
 
