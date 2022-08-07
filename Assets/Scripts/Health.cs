@@ -74,6 +74,10 @@ public class Health : MonoBehaviour {
         });
 
         onDeath.AddListener ((GameObject argu) => {
+            if (argu.GetComponent<PlayerController> ()) {
+                // Levelmanager.GameOver ();
+                return;
+            }
             if (argu.GetComponent<MainController> ()) {
                 Levelmanager.DecreaseLivingEnemies ();
             }
