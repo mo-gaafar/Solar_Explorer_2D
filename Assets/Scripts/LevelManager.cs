@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour {
     public UnityEvent onLevelOver;
     public UnityEvent onLevelStart;
     public GameObject Enemyspawner;
+    public GameObject Player;
+    public GameObject LevelOverScreen;
 
     // Update is called once per frame
     void Update () {
@@ -20,6 +22,8 @@ public class LevelManager : MonoBehaviour {
         currentLevelTime += Time.deltaTime;
         if (currentLevelTime >= MaxLevelTimeSec) {
             currentLevelTime = 0;
+            GameOver ();
+            // onLevelOver.Invoke ();
             // SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
         }
 
@@ -37,10 +41,12 @@ public class LevelManager : MonoBehaviour {
         (Enemyspawner.GetComponent<EnemySpawner> ()).DecreaseCounter ();
     }
 
-    // public void GameOver(){
-    //     isLevelOver = true;
-    //     onLevelOver.Invoke();
-    // }
+    public void GameOver () {
+        // isLevelOver = true;
+        Player.SetActive (false);
+        LevelOverScreen.SetActive (true);
+        onLevelOver.Invoke ();
+    }
     public void Retry () {
         SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
     }
