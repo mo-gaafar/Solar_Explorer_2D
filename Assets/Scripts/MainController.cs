@@ -6,7 +6,7 @@ using static Movement;
 
 public abstract class MainController : MonoBehaviour {
 
-    protected Movement movement = new Movement ();
+    // protected Movement movement = new Movement ();
 
     public Health healthComponent;
 

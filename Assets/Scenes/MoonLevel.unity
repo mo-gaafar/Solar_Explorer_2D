@@ -380,6 +380,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8320152}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -417,6 +429,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &10395933
@@ -2609,7 +2624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88716539}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.0000028461216}
-  m_LocalPosition: {x: 0, y: 0.88, z: -0.01}
+  m_LocalPosition: {x: -0, y: 0.71, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6395,8 +6410,6 @@ GameObject:
   - component: {fileID: 236672948}
   - component: {fileID: 236672947}
   - component: {fileID: 236672951}
-  - component: {fileID: 236672950}
-  - component: {fileID: 236672949}
   m_Layer: 5
   m_Name: TasksButton
   m_TagString: Untagged
@@ -6463,40 +6476,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236672945}
   m_CullTransparentMesh: 1
---- !u!114 &236672949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236672945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &236672950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236672945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!114 &236672951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9846,6 +9825,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 383432915}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -9883,6 +9874,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &384463041
@@ -10499,7 +10493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 410507021}
   Collider: {fileID: 410507019}
-  gun: {fileID: 483944516318837854, guid: ec75c6d8a503b9f458ac6028277f9a63, type: 3}
+  gun: {fileID: 483944516318837854, guid: d1c758b0c3f1ba04fb142f3da62e2fa4, type: 3}
   TheGun: {fileID: 0}
   MissilePrefab: {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
 --- !u!212 &410507021
@@ -17681,7 +17675,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 637872364}
         m_TargetAssemblyTypeName: ShakeBuilding, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Shake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 637872365}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17728,6 +17734,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &643130691
@@ -19269,6 +19278,8 @@ GameObject:
   - component: {fileID: 698623738}
   - component: {fileID: 698623737}
   - component: {fileID: 698623740}
+  - component: {fileID: 698623742}
+  - component: {fileID: 698623741}
   m_Layer: 5
   m_Name: PlayerHUD
   m_TagString: Untagged
@@ -19377,6 +19388,40 @@ MonoBehaviour:
   LevelManager: {fileID: 468823923}
   healthText: {fileID: 0}
   timeText: {fileID: 685294376}
+--- !u!114 &698623741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698623735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &698623742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698623735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &700305670
 GameObject:
   m_ObjectHideFlags: 0
@@ -22876,6 +22921,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 829123096}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -22913,6 +22970,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &836632772
@@ -24231,6 +24291,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 889198934}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -24268,6 +24340,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &891342120
@@ -25044,7 +25119,7 @@ MonoBehaviour:
   firingPoint: {fileID: 88716540}
   currentGun: {fileID: 483944516318837854, guid: ec75c6d8a503b9f458ac6028277f9a63, type: 3}
   _gunInventory:
-  - {fileID: 483944516318837854, guid: ec75c6d8a503b9f458ac6028277f9a63, type: 3}
+  - {fileID: 483944516318837854, guid: d1c758b0c3f1ba04fb142f3da62e2fa4, type: 3}
   _CollectibleInventory: []
   switchingTime: 0.5
 --- !u!114 &911130317
@@ -37321,6 +37396,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1365933781}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -37358,6 +37445,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &1367325287
@@ -39636,6 +39726,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1452413774}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -39673,6 +39775,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &1453866030
@@ -40349,6 +40454,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1462183254}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -40383,6 +40500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Debris:
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
   - {fileID: 4097891277083010511, guid: 1f35c7622a8c2d346bed37279d58e5d9, type: 3}
   - {fileID: 1094238210601792300, guid: fe3b3d257af271a419dd452ee3eacc22, type: 3}
   - {fileID: 4619285337548936057, guid: a73c27815edc52340af9fb2cdf8aa2c5, type: 3}
@@ -42501,6 +42621,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1541650187}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -42538,6 +42670,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &1551014181
@@ -49557,6 +49692,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1848228386}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -49591,9 +49738,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Debris:
-  - {fileID: 4097891277083010511, guid: 1f35c7622a8c2d346bed37279d58e5d9, type: 3}
-  - {fileID: 1094238210601792300, guid: fe3b3d257af271a419dd452ee3eacc22, type: 3}
-  - {fileID: 4619285337548936057, guid: a73c27815edc52340af9fb2cdf8aa2c5, type: 3}
+  - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
+  - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &1848828715
@@ -54330,6 +54477,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2031469327}
+        m_TargetAssemblyTypeName: DebrisSpawner, Assembly-CSharp
+        m_MethodName: GenerateDebris
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -54367,6 +54526,9 @@ MonoBehaviour:
   - {fileID: 3084010317463442856, guid: 98429325fab931e45bac02cf2ecd5a18, type: 3}
   - {fileID: 2075736219390384709, guid: b98ba01f441b539418dbedc8e72dd6b5, type: 3}
   - {fileID: 5094447102918249158, guid: 0e22d2a9c15a7ea4fa8e2ef230c88d8d, type: 3}
+  - {fileID: 4215715483450671410, guid: 1d2f80c9e6808af49b79958a20949109, type: 3}
+  - {fileID: 5522128032815441075, guid: d8608fdc1cc5ce74a96fa7f3dfa8a409, type: 3}
+  - {fileID: 2916165118985715588, guid: a99cbda7bb1dea34f90c16f9d229b70c, type: 3}
   MinOffset: 0
   MaxOffset: 0
 --- !u!1 &2033184020
@@ -57635,7 +57797,6 @@ GameObject:
   - component: {fileID: 7647356825616518175}
   - component: {fileID: 7647356825616518174}
   - component: {fileID: 7647356825616518146}
-  - component: {fileID: 7647356825616518173}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -57672,25 +57833,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7647356825616518168}
   m_CullTransparentMesh: 1
---- !u!114 &7647356825616518173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7647356825616518168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &7647356825616518174
 MonoBehaviour:
   m_ObjectHideFlags: 0
