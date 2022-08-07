@@ -8,7 +8,7 @@ public class EnemyDrop : MonoBehaviour
     // Start is called before the first frame update
     public void GenerateSlime()
     {
-        Instantiate(Slime,transform.position,transform.rotation);
+        Instantiate(Slime,transform.position,Quaternion.identity);
 
 
     }
