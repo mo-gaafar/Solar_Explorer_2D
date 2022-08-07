@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 2658014830480995419}
   - component: {fileID: 1312803311730351643}
   - component: {fileID: 4697930305565288515}
+  - component: {fileID: 1653080763372646920}
   m_Layer: 8
   m_Name: SmallCharger
   m_TagString: Enemy
@@ -273,25 +274,13 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1312803311730351642}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1653080763372646920}
+        m_TargetAssemblyTypeName: EnemyDrop, Assembly-CSharp
+        m_MethodName: GenerateSlime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -366,7 +355,6 @@ MonoBehaviour:
   ATTACK_RANGE: 5
   DamagePerSecond: 25.25
   AttackCooldown: 3
-  HitDamage: 10
   Player: {fileID: 0}
   HomePosition: {x: 0, y: 0}
   PlayerDistance: 100
@@ -411,6 +399,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1653080763372646920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312803311730351640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d1a4136bd4802488dba5ee123250d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slime: {fileID: 7640191481279844742, guid: 8d2bc5191fc65344cb608e5eab48054c, type: 3}
 --- !u!1 &3532715177730734772
 GameObject:
   m_ObjectHideFlags: 0
