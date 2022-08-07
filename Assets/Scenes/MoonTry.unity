@@ -12712,7 +12712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e999da9b6a29740851246c117844c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxLevelTimeSec: 10
+  MaxLevelTimeSec: 100
   onLevelOver:
     m_PersistentCalls:
       m_Calls: []

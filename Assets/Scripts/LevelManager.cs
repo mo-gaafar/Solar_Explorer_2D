@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour {
     public GameObject Enemyspawner;
     public GameObject Player;
     public GameObject LevelOverScreen;
+    public GameObject HUD;
 
     // Update is called once per frame
     void Update () {
@@ -45,6 +46,7 @@ public class LevelManager : MonoBehaviour {
         // isLevelOver = true;
         Player.SetActive (false);
         LevelOverScreen.SetActive (true);
+        HUD.SetActive (false);
         onLevelOver.Invoke ();
     }
     public void Retry () {
