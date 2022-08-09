@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MissileCollectible : GunCollectible
 {
-    public GameObject MissilePrefab;
+    [SerializeField] GameObject MissilePrefab;
     private void Start()
     {
         CollectibleSpawnOffset = new Vector2(3, 3);
@@ -20,7 +20,6 @@ public class MissileCollectible : GunCollectible
         TheGun = Instantiate(gun, transform.position, transform.rotation);
 
         //Set Up the projectile
-        MissilePrefab = Instantiate(MissilePrefab);
         ((ProjectileGun)TheGun).SetProjectile(MissilePrefab);
 
         gunController.PickupGunCollectible(this);

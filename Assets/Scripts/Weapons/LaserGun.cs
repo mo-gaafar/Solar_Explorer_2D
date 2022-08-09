@@ -6,6 +6,11 @@ public class LaserGun : Gun {
 
     private LineRenderer laserLine;
 
+    public override void AddDamage(int Addend)
+    {
+        damage += Addend;
+    }
+
     public override void Awake () {
         // Debug.Log ("LaserGun Awake");
         laserLine = GetComponent<LineRenderer> ();

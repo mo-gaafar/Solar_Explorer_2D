@@ -8,7 +8,6 @@ public class Missile : Projectile {
     public GameObject HitEffect1;
     public GameObject HitEffect2;
     public override void Setup (Vector2 direction) {
-        Debug.Log("I got called");
         this.direction = direction;
 
         //transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
@@ -16,8 +15,6 @@ public class Missile : Projectile {
     }
 
     private void Awake () {
-        Debug.Log($"Transform.up mn gowa is {transform.up}");
-        Debug.Log($"Euler b2a mn gowa is {transform.rotation.eulerAngles[2]}");
     }
     public override void Update () {
         float moveSpeed = 10f;

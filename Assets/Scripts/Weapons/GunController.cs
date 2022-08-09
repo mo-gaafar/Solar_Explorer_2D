@@ -158,20 +158,6 @@ public class GunController : MonoBehaviour {
 
     }
 
-    public bool UpdateProjectileDmg(int Addend)
-    {
-        bool res = false;
-        for (int i = 0; i < _gunInventory.Count; i++)
-        {
-            if(_gunInventory[i] as ProjectileGun)
-            {
-                ((ProjectileGun)_gunInventory[i]).AddtoProjectileDamage(Addend);
-                res = true;
-            }
-        }
-        return res;
-
-    }
     public bool UpdateProjectileNbullets(int Addend)
     {
         bool res = false;
@@ -188,5 +174,18 @@ public class GunController : MonoBehaviour {
     public void SetGun(Gun newgun)
     {
         currentGun = newgun;
+    }
+
+
+    public bool UpgradeDamage(int Addend)
+    {
+        bool res = false;
+        for (int i = 0; i < _gunInventory.Count; i++)
+        {
+            
+                _gunInventory[i].AddDamage(Addend);
+                res = true;
+        }
+        return res;
     }
 }

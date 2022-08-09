@@ -7,15 +7,26 @@ public class ProjectileGun : Gun {
     [SerializeField] private GameObject pfProjectile;
     [SerializeField] private int NumberOfProjectiles=1;
     [SerializeField] private float gunWidth=2f;
+    [SerializeField] private List<GameObject> BulletPrefabs;
 
     public void AddtoNumberProjectiles(int Addend)
     {
         NumberOfProjectiles += Addend;
     }
 
-    public void AddtoProjectileDamage(int Addend)
+    public override void AddDamage(int Addend)
     {
         damage += Addend;
+        if(damage > 10)
+        {
+            pfProjectile = BulletPrefabs[1];
+
+
+        }
+        if (damage > 20)
+        {
+            pfProjectile = BulletPrefabs[2];
+        }
     }
     public void SetProjectile(GameObject newProjectile)
     {
@@ -24,6 +35,13 @@ public class ProjectileGun : Gun {
 
     public override void Awake () {
         Debug.Log ("ProjectileGun Awake");
+        if(pfProjectile.GetComponent<Bullet>())
+        {
+            damage = 10;
+        }else if (pfProjectile.GetComponent<Missile>())
+        {
+            damage = 20;
+        }
 
     }
 

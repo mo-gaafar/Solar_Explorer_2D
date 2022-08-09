@@ -41,4 +41,6 @@ public abstract class Gun : MonoBehaviour {
 
     public abstract void Clone (GameObject srcGun, GameObject dstGun);
 
+    public abstract void AddDamage(int Addend);
+
 }

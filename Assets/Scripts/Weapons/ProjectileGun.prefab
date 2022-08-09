@@ -53,3 +53,7 @@ MonoBehaviour:
   pfProjectile: {fileID: 0}
   NumberOfProjectiles: 1
   gunWidth: 2
+  BulletPrefabs:
+  - {fileID: 3038721125155184592, guid: 5b9c14c94481e8548a9c83c195b49188, type: 3}
+  - {fileID: 39933163210575758, guid: 0740648b7f5773b40a362e4b23581641, type: 3}
+  - {fileID: 127705844037014805, guid: d8ec62d11e451a044b84eba0b3b0ddee, type: 3}
