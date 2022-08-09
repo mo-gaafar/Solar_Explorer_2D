@@ -51,22 +51,32 @@ public class ProjectileGun : Gun {
     public void SetProjectile(GameObject newProjectile)
     {
         pfProjectile = newProjectile;
+        if (pfProjectile?.GetComponent<Bullet>())
+        {
+            damage = 10;
+        }
+        else if (pfProjectile?.GetComponent<Missile>())
+        {
+            damage = 20;
+        }
     }
 
     public override void Awake () {
         Debug.Log ("ProjectileGun Awake");
-        if(pfProjectile.GetComponent<Bullet>())
-        {
-            damage = 10;
-        }else if (pfProjectile.GetComponent<Missile>())
-        {
-            damage = 20;
-        }
+        
 
     }
 
     public override void Start () {
         Debug.Log ("ProjectileGun Start");
+        if (pfProjectile?.GetComponent<Bullet>())
+        {
+            damage = 10;
+        }
+        else if (pfProjectile?.GetComponent<Missile>())
+        {
+            damage = 20;
+        }
 
     }
     public override void Update () {
