@@ -57,3 +57,7 @@ MonoBehaviour:
   - {fileID: 3038721125155184592, guid: 5b9c14c94481e8548a9c83c195b49188, type: 3}
   - {fileID: 39933163210575758, guid: 0740648b7f5773b40a362e4b23581641, type: 3}
   - {fileID: 127705844037014805, guid: d8ec62d11e451a044b84eba0b3b0ddee, type: 3}
+  MissilePrefabs:
+  - {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+  - {fileID: 2244350300451074483, guid: 93567df9fdbbd9e48ac5bb9643f051ef, type: 3}
+  - {fileID: 2244350300451074483, guid: 69aaad8eee0dfc34f87e5e377a4c3e90, type: 3}

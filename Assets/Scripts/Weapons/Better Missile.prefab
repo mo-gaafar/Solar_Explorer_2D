@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6538177425979271605}
   - component: {fileID: 7837784756627666652}
   m_Layer: 0
-  m_Name: MissilePrefab
+  m_Name: Better Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cea01b40fb939b344b147f4fe0f60acf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c34df4504019c8f489971163b28ca0a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.17, y: 0.26}
+  m_Size: {x: 0.53125, y: 0.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,7 +106,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.53125, y: 0.8125}
-    newSize: {x: 0.17, y: 0.26}
+    newSize: {x: 0.53125, y: 0.8125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e249575e2bb2a24cb155046e83273d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitEffect1: {fileID: 3247267198324877035, guid: de3c72f84ea76da41899afa20c22b797, type: 3}
-  HitEffect2: {fileID: 3247267198324877035, guid: 791644059cfcbba41b114bd6ce43a51d, type: 3}
+  HitEffect1: {fileID: 334784360720922748, guid: 8ba513c8c26983b49913b2b03b8e1dd5, type: 3}
+  HitEffect2: {fileID: 5712332376099986838, guid: e90e76de258383344b77f3ee8b50718e, type: 3}
 --- !u!50 &6538177425979271605
 Rigidbody2D:
   serializedVersion: 4

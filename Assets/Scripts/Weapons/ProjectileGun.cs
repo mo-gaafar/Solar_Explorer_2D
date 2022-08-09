@@ -8,16 +8,16 @@ public class ProjectileGun : Gun {
     [SerializeField] private int NumberOfProjectiles=1;
     [SerializeField] private float gunWidth=2f;
     [SerializeField] private List<GameObject> BulletPrefabs;
+    [SerializeField] private List<GameObject> MissilePrefabs;
 
     public void AddtoNumberProjectiles(int Addend)
     {
         NumberOfProjectiles += Addend;
     }
 
-    public override void AddDamage(int Addend)
+    void SetBulletPrefab()
     {
-        damage += Addend;
-        if(damage > 10)
+        if (damage > 15)
         {
             pfProjectile = BulletPrefabs[1];
 
@@ -27,6 +27,26 @@ public class ProjectileGun : Gun {
         {
             pfProjectile = BulletPrefabs[2];
         }
+    }
+    void SetMissilePrefab()
+    {
+        if (damage > 25)
+        {
+            pfProjectile = MissilePrefabs[1];
+
+
+        }
+        if (damage > 35)
+        {
+            pfProjectile = MissilePrefabs[2];
+        }
+    }
+
+    public override void AddDamage(int Addend)
+    {
+        damage += Addend;
+        if (pfProjectile.GetComponent<Bullet>()) { SetBulletPrefab(); }
+        if (pfProjectile.GetComponent<Missile>()) { SetMissilePrefab(); }
     }
     public void SetProjectile(GameObject newProjectile)
     {

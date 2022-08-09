@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3247267198324877037}
   - component: {fileID: 3247267198324877034}
   m_Layer: 0
-  m_Name: ProjectileHitEffect 1
+  m_Name: MissileHitEffect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
