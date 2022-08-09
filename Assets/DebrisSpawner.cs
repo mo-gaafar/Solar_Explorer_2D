@@ -37,7 +37,7 @@ public class DebrisSpawner : MonoBehaviour
                 RandomizeStart();
                 RandomizeEnd();
                 Debug.Log(StartPoint);
-                Debug.Log("Endpoint is " +EndPoint);
+                //Debug.Log("Endpoint is " +EndPoint);
                 CurrentDebris = Instantiate(Debris[i], StartPoint, transform.rotation);
                 CurrentDebris.GetComponent<Debris>().SetStart_End(StartPoint, EndPoint);
             }

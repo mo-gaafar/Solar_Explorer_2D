@@ -25,7 +25,7 @@ public class Debris : MonoBehaviour
     {
         StartPoint = Vec;
         TrajEndPoint = Vec2;
-        Debug.Log("TrajEnd is " + TrajEndPoint);
+        //Debug.Log("TrajEnd is " + TrajEndPoint);
     }
 
 
@@ -50,7 +50,7 @@ public class Debris : MonoBehaviour
             //animation time is 2 seconds
             if (Mathf.Abs(AnimationTime - Timer) <= 0.02)
             {
-                Debug.Log("LolDEBRISSSSSSS");
+                //Debug.Log("LolDEBRISSSSSSS");
                 Project = false;
                 Slide = true;
                 Timer = 0;
@@ -63,7 +63,7 @@ public class Debris : MonoBehaviour
         {
             if (Slide)
             {
-                Debug.Log("Sliding");
+                //Debug.Log("Sliding");
                 //Increase Rotation Considerably
                 transform.Rotate(0, 0, RotationSpeed+ RotationJerk);
                 //slide then fade into destruction

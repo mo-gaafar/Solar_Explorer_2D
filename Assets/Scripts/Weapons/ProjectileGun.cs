@@ -37,12 +37,14 @@ public class ProjectileGun : Gun {
     }
 
     public override void Shoot (Transform firingPoint) {
-        //Debug.Log ("ProjectileGun Shoot");
+        //Debug.Log("ProjectileGun Shoot");
 
         if (Time.time - lastShotTime > shootingInterval) {
+            //Debug.Log("Shoot mn gowa");
             lastShotTime = Time.time;
             if (NumberOfProjectiles == 1)
             {
+            //Debug.Log("Shootsingle barra");
                 ShootSingle(firingPoint.position, firingPoint.rotation);
             }
             else if (NumberOfProjectiles == 2)
@@ -109,11 +111,22 @@ public class ProjectileGun : Gun {
 
     void ShootSingle(Vector3 Position, Quaternion rotation)
     {
+        //Debug.Log("Shootsingle mn gowa");
+        Debug.Log($"Euler mn barra is {rotation.eulerAngles.z}");
         GameObject projectile = Instantiate(pfProjectile, Position, rotation);
         //GameObject projectile = Instantiate(pfProjectile, Position, rotation);
+        if (projectile.GetComponent<Projectile>())
+        {
         Projectile projectileScript = projectile.GetComponent<Projectile>();
+        Debug.Log($"transform.up mn b3d elsetup is {projectile.transform.up}");
         projectileScript.Setup(projectile.transform.up);
         projectileScript.SetDamage(damage);
+
+        }
+        else
+        {
+            Debug.Log("3leek wa7ed yaba4a <3");
+        }
     }
 
     public override void StopShoot () {

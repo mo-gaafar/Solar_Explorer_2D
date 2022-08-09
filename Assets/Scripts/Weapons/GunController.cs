@@ -39,6 +39,8 @@ public class GunController : MonoBehaviour {
         Burst
     }
 
+
+    
     void Awake () {
         // gunInventory = new Gun[2];
         // gunInventory[0] = new LaserGun();
@@ -183,5 +185,8 @@ public class GunController : MonoBehaviour {
         }
         return res;
     }
-
+    public void SetGun(Gun newgun)
+    {
+        currentGun = newgun;
+    }
 }

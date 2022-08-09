@@ -7,7 +7,8 @@ public class EnemyTurretController : MainController {
 
     [SerializeField] private Transform turretPivot;
     private GameObject targetPlayer;
-
+    [SerializeField] private GameObject _guntype;
+    [SerializeField] private GameObject pfProjectile;
     [SerializeField] private float TURRET_ATTACK_RANGE = 10f;
     [SerializeField] private float TURRET_TIME_COOLDOWN = 1f;
     private float TurretTimeStart = 0f;
@@ -20,6 +21,13 @@ public class EnemyTurretController : MainController {
         onNearbyEnemy.AddListener ((distance) => {
             TurretAttack (distance);
         });
+        GunController Gc = GetComponent<GunController> ();
+        GameObject gun = Instantiate(_guntype);
+        if(gun.GetComponent<Gun>() as ProjectileGun)
+        {
+            ((ProjectileGun)gun.GetComponent<Gun>()).SetProjectile(pfProjectile);
+        }
+        Gc.SetGun(gun.GetComponent<Gun>());
     }
 
     // Update is called once per frame
