@@ -2684,7 +2684,7 @@ MonoBehaviour:
   - LevelName: Earth
     LevelSceneIndex: 3
     LevelNumber: 1
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 424414171}
     LevelDescription: home sweet home
   - LevelName: Moon
@@ -2696,40 +2696,40 @@ MonoBehaviour:
   - LevelName: Mars
     LevelSceneIndex: 4
     LevelNumber: 3
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 245554304}
     LevelDescription: mars is red because it contains iron oxides
   - LevelName: Venus
     LevelSceneIndex: 5
     LevelNumber: 4
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 558219938}
     LevelDescription: the brightest planet in the solar system and the only planet
       that rotates clockwise
   - LevelName: Mercury
     LevelSceneIndex: 6
     LevelNumber: 5
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 1787995770}
     LevelDescription: the closest planet to the sun and therefore the hottest planet
   - LevelName: Jupiter
     LevelSceneIndex: 7
     LevelNumber: 6
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 494167642}
     LevelDescription: the largest planet in the solar system,  11 times larger than
       earth
   - LevelName: Saturn
     LevelSceneIndex: 8
     LevelNumber: 7
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 1943241608}
     LevelDescription: It is very windy on saturn, winds around the equator can be
       1,800 km/hour.
   - LevelName: Uranus
     LevelSceneIndex: 9
     LevelNumber: 8
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 383868294}
     LevelDescription: This is the only planet that rotates on its side and is known
       as the sideways planet
@@ -6059,7 +6059,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 814314603}
         m_TargetAssemblyTypeName: LevelPicker, Assembly-CSharp
-        m_MethodName: PlayLevel
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
