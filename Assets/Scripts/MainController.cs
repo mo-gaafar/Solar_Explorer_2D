@@ -11,7 +11,7 @@ public abstract class MainController : MonoBehaviour {
     public Health healthComponent;
 
     [SerializeField] public float maxForce = 5f;
-    [SerializeField] public const float EnemyDetectionRadius = 10f;
+    [SerializeField] public static float EnemyDetectionRadius = 10f;
 
     protected Vector2 position = new Vector2 ();
     // protected GunController gunController;
