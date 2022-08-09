@@ -20,7 +20,7 @@ public class MissileCollectible : GunCollectible
         TheGun = Instantiate(gun, transform.position, transform.rotation);
 
         //Set Up the projectile
-        //MissilePrefab = Instantiate(MissilePrefab);
+        MissilePrefab = Instantiate(MissilePrefab);
         ((ProjectileGun)TheGun).SetProjectile(MissilePrefab);
 
         gunController.PickupGunCollectible(this);

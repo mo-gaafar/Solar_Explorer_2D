@@ -72,7 +72,10 @@ public class Health : MonoBehaviour {
             Heal (heal);
             Debug.Log ("Healing");
         });
-
+        onHeal.AddListener((float heal) => {
+            AddMaxHealth(heal);
+            Debug.Log("MaxHealing");
+        });
         onDeath.AddListener ((GameObject argu) => {
             if (argu.GetComponent<PlayerController> ()) {
                 // Levelmanager.GameOver ();
@@ -95,6 +98,14 @@ public class Health : MonoBehaviour {
         }
         health = Mathf.Min (health + fraction * MaxHealth, MaxHealth);
         return true;
+    }
+
+    public void AddMaxHealth (float AddedHealth)
+    {
+        _maxHealth += AddedHealth;
+        _health += AddedHealth;
+        onMaxHealthChanged.Invoke(_maxHealth);
+        onHealthChanged.Invoke(_health);
     }
 
 }

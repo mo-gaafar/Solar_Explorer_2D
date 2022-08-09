@@ -48,8 +48,8 @@ MonoBehaviour:
   damage: 10
   shootingInterval: 1
   range: 100
-  lastShotTime: 25.702076
+  lastShotTime: 0
   impactForce: 30
-  pfProjectile: {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+  pfProjectile: {fileID: 0}
   NumberOfProjectiles: 1
   gunWidth: 2

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthUpgrade : Upgrade
+public class Shield : Upgrade
 {
-    [SerializeField]float AddedMaximumHealth = 50f;
+    [SerializeField] float AddedMaximumHealth = 50f;
     Health healthcomp;
     private void Start()
     {
@@ -33,6 +33,6 @@ public class HealthUpgrade : Upgrade
     {
         healthcomp.AddMaxHealth(AddedMaximumHealth);
         Destroy(gameObject);
-       
+
     }
 }
