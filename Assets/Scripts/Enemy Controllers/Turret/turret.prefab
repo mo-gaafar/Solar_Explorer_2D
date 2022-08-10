@@ -210,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 0}
   maxForce: 5
+  rb: {fileID: 0}
   onShoot:
     m_PersistentCalls:
       m_Calls: []
@@ -228,7 +229,7 @@ MonoBehaviour:
   turretPivot: {fileID: 439699803913258237}
   _guntype: {fileID: 483944516318837852, guid: ec75c6d8a503b9f458ac6028277f9a63, type: 3}
   pfProjectile: {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
-  TURRET_ATTACK_RANGE: 10
+  TURRET_ATTACK_RANGE: 4.56
   TURRET_TIME_COOLDOWN: 0.45
 --- !u!114 &439699804041042471
 MonoBehaviour:
