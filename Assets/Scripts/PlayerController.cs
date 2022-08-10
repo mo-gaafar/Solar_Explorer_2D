@@ -10,6 +10,9 @@ public class PlayerController : MainController {
     [SerializeField] private float PickupDetectionRadius = 1f;
     [SerializeField] private UnityEvent<float> onFuelPickup;
 
+    [SerializeField] public List<GameObject> EnemiesAttacking = new List<GameObject> ();
+    [SerializeField] public int MaxEnemiesAttacking = 4;
+
     private float CurrentFuel = 0;
     public float MaxFuel = 1000;
 
