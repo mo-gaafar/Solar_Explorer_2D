@@ -11,11 +11,11 @@ public abstract class MainController : MonoBehaviour {
     public Health healthComponent;
 
     [SerializeField] public float maxForce = 5f;
-    [SerializeField] public const float EnemyDetectionRadius = 10f;
+    [SerializeField] public static float EnemyDetectionRadius = 10f;
 
     protected Vector2 position = new Vector2 ();
     // protected GunController gunController;
-    protected Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
 
     public UnityEvent onShoot;
     public UnityEvent onStopShoot;
