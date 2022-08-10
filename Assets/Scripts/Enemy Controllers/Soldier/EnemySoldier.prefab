@@ -635,7 +635,7 @@ MonoBehaviour:
   PATROL_RADIUS: 6.88
   HitDamage: 10
   _guntype: {fileID: 483944516318837852, guid: ec75c6d8a503b9f458ac6028277f9a63, type: 3}
-  pfProjectile: {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
+  pfProjectile: {fileID: 3038721125155184592, guid: 5b9c14c94481e8548a9c83c195b49188, type: 3}
   Player: {fileID: 0}
   AttackerQueue: []
   MaxAttackers: 0

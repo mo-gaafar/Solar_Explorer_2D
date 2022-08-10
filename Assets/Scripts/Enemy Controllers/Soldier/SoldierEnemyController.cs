@@ -90,6 +90,10 @@ public class SoldierEnemyController : MainController {
         }
         currentState.OnCollisionEnter2D (this, other);
     }
+
+    private void OnDestroy () {
+        AttackerQueue.Remove (gameObject);
+    }
 }
 
 public abstract class SoldierBaseState {
