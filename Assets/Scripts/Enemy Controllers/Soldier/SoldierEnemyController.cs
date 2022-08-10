@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
 public class SoldierEnemyController : MainController {
@@ -7,24 +8,31 @@ public class SoldierEnemyController : MainController {
     public SoldierBaseState currentState;
     public SoldierPatrolState SoldierPatrolState = new SoldierPatrolState ();
     public SoldierAttackState SoldierAttackState = new SoldierAttackState ();
-    public SoldierIdleState SoldierIdleState = new SoldierIdleState ();
-    public SoldierGoHomeState SoldierGoHomeState = new SoldierGoHomeState ();
-    public SoldierGoToState SoldierGoToState = new SoldierGoToState ();
 
     // * Tunable Variables
     public float FOLLOW_PLAYER_RANGE = EnemyDetectionRadius * 0.9f;
     public float ATTACK_RANGE = EnemyDetectionRadius * 0.5f;
+    public float STOP_RANGE = EnemyDetectionRadius * 0.1f;
+    public float PATROL_RADIUS = 10f;
+
     [SerializeField] public float HitDamage = 10f;
-    [SerializeField] public int AttackCooldown = 3;
+    // [SerializeField] public int AttackCooldown = 3;
 
     // * Private Variables
     [HideInInspector] public GameObject Player;
+    [HideInInspector] public List<GameObject> AttackerQueue;
+    [HideInInspector] public int MaxAttackers;
+
+    // docs https://arongranberg.com/astar/docs/aipath.html
+    [HideInInspector] public AIPath AIPath;
+    [HideInInspector] public AIDestinationSetter Destination;
+
     [HideInInspector] public GunController GunController;
-    [HideInInspector] public Vector2 HomePosition;
+    [HideInInspector] public Vector2 HomePosition; //Spawn location
     [HideInInspector] public float PlayerDistance = 100f;
-    [HideInInspector] public float AttackTimeStart = 0f;
-    [HideInInspector] public float AttackCounter = 0f;
-    [HideInInspector] public float AttackTimeCooldown = 1f;
+    // [HideInInspector] public float AttackTimeStart = 0f;
+    // [HideInInspector] public float AttackCounter = 0f;
+    // [HideInInspector] public float AttackTimeCooldown = 1f;
 
     [SerializeField] float CirclingRatePerSec = 5f;
     private float TempAngle = 0f;
@@ -34,8 +42,13 @@ public class SoldierEnemyController : MainController {
         base.Start ();
         //Find player in scene
         Player = GameObject.FindGameObjectWithTag ("Player");
+        AttackerQueue = Player.GetComponent<PlayerController> ().EnemiesAttacking;
+        MaxAttackers = Player.GetComponent<PlayerController> ().MaxEnemiesAttacking;
         HomePosition = gameObject.transform.position;
         GunController = GetComponent<GunController> ();
+        AIPath = GetComponent<AIPath> ();
+        Destination = GetComponent<AIDestinationSetter> ();
+        // EnemyAI.
 
         onNearbyEnemy.AddListener ((distance) => {
             PlayerDistance = distance;
@@ -49,7 +62,7 @@ public class SoldierEnemyController : MainController {
 
     // Update is called once per frame
     void Update () {
-        //TODO Remove this asap
+        // // Remove this asap
         // LookAt (Player.transform.position);
         currentState.UpdateState (this);
     }
@@ -73,61 +86,81 @@ public abstract class SoldierBaseState {
     public void OnCollisionEnter2D (SoldierEnemyController controller, Collision2D other) { }
 }
 
-public class SoldierIdleState : SoldierBaseState {
-    public override void EnterState (SoldierEnemyController controller) {
-        Debug.Log ("Entering SoldierIdleState");
-    }
-    public override void UpdateState (SoldierEnemyController controller) {
-        // if (controller.PlayerDistance < controller.EnemyDetectionRadius) {
-        //     controller.SwitchState (controller.SoldierPatrolState);
-        // }
-    }
-}
-
 public class SoldierPatrolState : SoldierBaseState {
     public override void EnterState (SoldierEnemyController controller) {
         Debug.Log ("Entering SoldierPatrolState");
+        controller.Destination.target.position = GenerateRandomPoint (controller);
     }
     public override void UpdateState (SoldierEnemyController controller) {
-        if (controller.PlayerDistance < controller.FOLLOW_PLAYER_RANGE) {
-            controller.SwitchState (controller.SoldierGoToState);
+        // if no players nearby keep patrolling within spawn radius 
+        Debug.Log ("PlayerDistance: " + controller.PlayerDistance);
+        Debug.Log ("AttackerQueue: " + controller.AttackerQueue.Count);
+        // if player nearby and player enemy queue has space then switch to attack state
+
+        if (controller.PlayerDistance < controller.FOLLOW_PLAYER_RANGE &&
+            controller.AttackerQueue.Count < controller.MaxAttackers) {
+            //add myself to the queue
+            controller.AttackerQueue.Add (controller.gameObject);
+
+            controller.SwitchState (controller.SoldierAttackState);
         }
+
+        if (Vector2.Distance (controller.transform.position, controller.Destination.target.position) < controller.STOP_RANGE) {
+            controller.Destination.target.position = GenerateRandomPoint (controller);
+        }
+
+    }
+
+    public Vector2 GenerateRandomPoint (SoldierEnemyController controller) {
+        // generate random point within patrol radius
+        float randomAngle = Random.Range (0f, 360f);
+        float randomRadius = Random.Range (controller.ATTACK_RANGE, controller.PATROL_RADIUS);
+        Vector2 randomPoint = new Vector2 (randomRadius * Mathf.Cos (randomAngle), randomRadius * Mathf.Sin (randomAngle));
+        randomPoint += controller.HomePosition;
+        return randomPoint;
     }
 }
 
 public class SoldierAttackState : SoldierBaseState {
+    // lets not overengineer this
+    // private SoldierBaseState currentSubState;
+    // private SoldierGoToState SoldierGoToState = new SoldierGoToState ();
+    // private SoldierShootState SoldierShootState = new SoldierShootState ();
+
     public override void EnterState (SoldierEnemyController controller) {
         Debug.Log ("Entering SoldierAttackState");
     }
     public override void UpdateState (SoldierEnemyController controller) {
-        if (controller.PlayerDistance > controller.ATTACK_RANGE) {
-            controller.SwitchState (controller.SoldierPatrolState);
+        switch (controller.PlayerDistance) {
+
+            case float distance when distance < controller.STOP_RANGE:
+                controller.AIPath.isStopped = true;
+                controller.LookAt (controller.Player.transform.position);
+                break;
+            case float distance when distance < controller.ATTACK_RANGE:
+                // controller.SwitchState (controller.SoldierShootState)
+                //dont move and start shooting
+                controller.Destination.target = controller.Player.transform;
+                controller.LookAt (controller.Player.transform.position);
+                controller.onShoot.Invoke ();
+
+                break;
+            case float distance when distance < controller.FOLLOW_PLAYER_RANGE:
+                controller.Destination.target = controller.Player.transform;
+                // move and stop shooting
+                controller.AIPath.isStopped = false;
+
+                // controller.SwitchState (controller.SoldierGoToState);
+                break;
+            case float distance when distance > controller.FOLLOW_PLAYER_RANGE:
+                //remove myself from the queue
+                controller.AttackerQueue.Remove (controller.gameObject);
+                //go back to patrol state
+                controller.SwitchState (controller.SoldierPatrolState);
+
+                break;
+            default:
+                break;
         }
     }
-}
-
-public class SoldierGoHomeState : SoldierBaseState {
-    public override void EnterState (SoldierEnemyController controller) {
-        Debug.Log ("Entering SoldierGoHomeState");
-    }
-    public override void UpdateState (SoldierEnemyController controller) {
-        if (controller.PlayerDistance > controller.FOLLOW_PLAYER_RANGE) {
-            controller.SwitchState (controller.SoldierPatrolState);
-        }
-    }
-}
-
-public class SoldierGoToState : SoldierBaseState {
-    public override void EnterState (SoldierEnemyController controller) {
-        Debug.Log ("Entering SoldierGoToState");
-    }
-    public override void UpdateState (SoldierEnemyController controller) {
-        // controller.MoveTowards (controller.Player.transform.position, 2f);
-        // controller.LookAt (controller.Player.transform.position);
-
-        if (controller.PlayerDistance < controller.ATTACK_RANGE) {
-            controller.SwitchState (controller.SoldierAttackState);
-        }
-    }
-
 }

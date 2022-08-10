@@ -215,7 +215,7 @@ RectTransform:
   m_GameObject: {fileID: 5508480361594810909}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.003268327, y: 0.0020819872, z: 0.0025140978}
+  m_LocalScale: {x: 0.002603909, y: 0.0016587401, z: 0.0020030069}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5508480362075266863}
@@ -226,7 +226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.161, y: 0.492}
+  m_AnchoredPosition: {x: 0.167, y: -0.082}
   m_SizeDelta: {x: 160, y: 41.14441}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5508480361594810907
@@ -380,14 +380,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5508480362117031906}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.045231484, y: -0.14473751, z: 0}
-  m_LocalScale: {x: 0.45230448, y: 0.45230448, z: 0.45230448}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.0000029504295}
+  m_LocalPosition: {x: -0.039, y: 0.134, z: 0}
+  m_LocalScale: {x: 0.4363111, y: 0.4363111, z: 0.4363111}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5508480362861867703}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &5508480362117031904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -496,9 +496,9 @@ GameObject:
   - component: {fileID: 5508480362861867702}
   - component: {fileID: 5508480362861867700}
   - component: {fileID: 5508480362861867699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemySoldier
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,7 +512,7 @@ RectTransform:
   m_GameObject: {fileID: 5508480362861867710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2109, y: 2.2109, z: 2.2109}
+  m_LocalScale: {x: 1.4212921, y: 1.4212921, z: 1.4212921}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5508480362117031905}
@@ -522,7 +522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.22, y: 8.63}
+  m_AnchoredPosition: {x: -1.2251, y: 8.649}
   m_SizeDelta: {x: 0.34375, y: 0.40625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &5508480362861867709
@@ -569,7 +569,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 5bf1d51ab816a4d458bbf24339843a32, type: 3}
   m_Color: {r: 1, g: 0.6100562, b: 0.4198113, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.34375, y: 0.40625}
   m_AdaptiveModeThreshold: 0.5
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 5508480362861867706}
-  maxForce: 2.64
+  maxForce: 1.5
   onShoot:
     m_PersistentCalls:
       m_Calls: []
@@ -627,17 +627,19 @@ MonoBehaviour:
   onNearbyEnemy:
     m_PersistentCalls:
       m_Calls: []
-  FOLLOW_PLAYER_RANGE: 9
-  ATTACK_RANGE: 5
+  FOLLOW_PLAYER_RANGE: 4.79
+  ATTACK_RANGE: 3.9
+  STOP_RANGE: 1.32
+  PATROL_RADIUS: 6.88
   HitDamage: 10
-  AttackCooldown: 3
   Player: {fileID: 0}
+  AttackerQueue: []
+  MaxAttackers: 0
+  AIPath: {fileID: 0}
+  Destination: {fileID: 0}
   GunController: {fileID: 0}
   HomePosition: {x: 0, y: 0}
   PlayerDistance: 100
-  AttackTimeStart: 0
-  AttackCounter: 0
-  AttackTimeCooldown: 1
   CirclingRatePerSec: 5
 --- !u!114 &5508480362861867706
 MonoBehaviour:
@@ -774,7 +776,7 @@ MonoBehaviour:
   radius: 0.52
   height: 2
   canMove: 1
-  maxSpeed: 2.87
+  maxSpeed: 1.83
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -788,14 +790,14 @@ MonoBehaviour:
     mode: 2
     interval: 0.5
     sensitivity: 10
-    maximumInterval: 2
+    maximumInterval: 2.05
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 2.06
-  pickNextWaypointDist: 10.15
-  endReachedDistance: 1.49
+  slowdownDistance: 4.58
+  pickNextWaypointDist: 1.46
+  endReachedDistance: 0.77
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
