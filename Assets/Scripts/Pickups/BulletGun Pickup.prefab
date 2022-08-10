@@ -103,6 +103,7 @@ MonoBehaviour:
   gun: {fileID: 483944516318837854, guid: ec75c6d8a503b9f458ac6028277f9a63, type: 3}
   TheGun: {fileID: 0}
   BulletPrefab: {fileID: 3038721125155184592, guid: 5b9c14c94481e8548a9c83c195b49188, type: 3}
+  ShootingInterval: 0.5
 --- !u!61 &3175178272573083953
 BoxCollider2D:
   m_ObjectHideFlags: 0
