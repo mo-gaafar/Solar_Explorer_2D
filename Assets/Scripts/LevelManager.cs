@@ -17,6 +17,9 @@ public class LevelManager : MonoBehaviour {
     public GameObject LevelOverScreen;
     public GameObject HUD;
 
+    [SerializeField] Objective[] MainObjectives;
+    [SerializeField] Objective[] SecondaryObjectives;
+
     // Update is called once per frame
     void Update () {
 
@@ -56,4 +59,26 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene (0);
     }
 
+
+    void EnemyKilled()
+    {
+        for (int i = 0; i < MainObjectives.Length; i++)
+        {
+            if (MainObjectives[i].Type == ObjectiveType.Enemy) {
+                
+                
+            }
+
+        }
+    }
+
+    bool CheckLevelDone()
+    {
+        for(int i=0;i < MainObjectives.Length; i++)
+        {
+            if (!MainObjectives[i].CheckComplete()) { return false; }
+            
+        }
+        return true;
+    }
 }
