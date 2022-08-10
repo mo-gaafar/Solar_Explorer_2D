@@ -16,6 +16,10 @@ public class SoldierEnemyController : MainController {
     public float PATROL_RADIUS = 10f;
 
     [SerializeField] public float HitDamage = 10f;
+
+    //! Important Prefabs
+    [SerializeField] public GameObject _guntype;
+    [SerializeField] public GameObject pfProjectile;
     // [SerializeField] public int AttackCooldown = 3;
 
     // * Private Variables
@@ -54,7 +58,15 @@ public class SoldierEnemyController : MainController {
             PlayerDistance = distance;
         });
 
-        //The starting state is the patrol state
+        //! Intializing the gun and projectile
+        GunController gc = GetComponent<GunController> ();
+        GameObject gun = Instantiate (_guntype);
+        if (gun.GetComponent<Gun> () as ProjectileGun) {
+            ((ProjectileGun) gun.GetComponent<Gun> ()).SetProjectile (pfProjectile);
+        }
+        gc.SetGun (gun.GetComponent<Gun> ());
+
+        //* The starting state is the patrol state
 
         currentState = SoldierPatrolState;
         currentState.EnterState (this);
@@ -87,14 +99,18 @@ public abstract class SoldierBaseState {
 }
 
 public class SoldierPatrolState : SoldierBaseState {
+    private float RecalculateWaypointTimer = 0f;
+    private float RecalculateWaypointTime = 4f;
+    private float PrevPosition = 0f;
     public override void EnterState (SoldierEnemyController controller) {
         Debug.Log ("Entering SoldierPatrolState");
+        controller.Destination.target = new GameObject ().transform;
         controller.Destination.target.position = GenerateRandomPoint (controller);
     }
     public override void UpdateState (SoldierEnemyController controller) {
         // if no players nearby keep patrolling within spawn radius 
-        Debug.Log ("PlayerDistance: " + controller.PlayerDistance);
-        Debug.Log ("AttackerQueue: " + controller.AttackerQueue.Count);
+        // Debug.Log ("PlayerDistance: " + controller.PlayerDistance);
+        // Debug.Log ("AttackerQueue: " + controller.AttackerQueue.Count);
         // if player nearby and player enemy queue has space then switch to attack state
 
         if (controller.PlayerDistance < controller.FOLLOW_PLAYER_RANGE &&
@@ -108,6 +124,24 @@ public class SoldierPatrolState : SoldierBaseState {
         if (Vector2.Distance (controller.transform.position, controller.Destination.target.position) < controller.STOP_RANGE) {
             controller.Destination.target.position = GenerateRandomPoint (controller);
         }
+        // checks if the waypoint is unreachable (enemy stuck in a corner)
+        // by checking if x or y position has changed 
+        // if (Mathf.Abs (controller.transform.position.x - PrevPosition) < 0.0001f) {
+        //     PrevPosition = controller.transform.position.x;
+        //     Debug.Log ($"Waypoint unreachable {PrevPosition}");
+        //     // controller.rb.velocity = Vector2.zero;
+
+        // }
+        RecalculateWaypointTimer += Time.deltaTime;
+        if (RecalculateWaypointTimer > RecalculateWaypointTime) {
+            RecalculateWaypointTimer = 0f;
+            controller.Destination.target.position = GenerateRandomPoint (controller);
+        }
+
+    }
+    public void OnCollisionEnter2D (SoldierEnemyController controller, Collision2D other) {
+        controller.Destination.target.position = GenerateRandomPoint (controller);
+        //circlecast2d to check if something within range
 
     }
 
@@ -123,6 +157,7 @@ public class SoldierPatrolState : SoldierBaseState {
 
 public class SoldierAttackState : SoldierBaseState {
     // lets not overengineer this
+    // proceeds to do just that:
     // private SoldierBaseState currentSubState;
     // private SoldierGoToState SoldierGoToState = new SoldierGoToState ();
     // private SoldierShootState SoldierShootState = new SoldierShootState ();

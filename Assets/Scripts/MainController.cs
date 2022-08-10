@@ -15,7 +15,7 @@ public abstract class MainController : MonoBehaviour {
 
     protected Vector2 position = new Vector2 ();
     // protected GunController gunController;
-    protected Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
 
     public UnityEvent onShoot;
     public UnityEvent onStopShoot;
