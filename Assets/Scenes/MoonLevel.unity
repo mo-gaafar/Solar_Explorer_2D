@@ -12519,6 +12519,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   LevelOverScreen: {fileID: 0}
   HUD: {fileID: 0}
+  MainObjectives: []
+  SecondaryObjectives: []
 --- !u!1 &470678557
 GameObject:
   m_ObjectHideFlags: 0
