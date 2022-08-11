@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ChargerGoHomeState : ChargerBaseState {
     public override void EnterState (ChargerEnemyController controller) {
-        Debug.Log ("Entering ChargerGoHomeState");
+        //Debug.Log ("Entering ChargerGoHomeState");
         controller.AttackCounter = 0;
     }
     public override void UpdateState (ChargerEnemyController controller) {

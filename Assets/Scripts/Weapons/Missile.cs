@@ -27,7 +27,7 @@ public class Missile : Projectile {
 
     public override void OnCollisionEnter2D (Collision2D other) {
         if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Player" || other.gameObject.tag == "Obstacle") {
-            Debug.Log ("Hit enemy");
+            //Debug.Log ("Hit enemy");
 
             // OnHit.Invoke (other.gameObject); // call OnHit event
             Health healthComponent = other.gameObject.GetComponent<Health> ();

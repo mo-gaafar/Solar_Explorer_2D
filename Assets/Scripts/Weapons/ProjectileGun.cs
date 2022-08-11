@@ -62,13 +62,13 @@ public class ProjectileGun : Gun {
     }
 
     public override void Awake () {
-        Debug.Log ("ProjectileGun Awake");
+        //Debug.Log ("ProjectileGun Awake");
         
 
     }
 
     public override void Start () {
-        Debug.Log ("ProjectileGun Start");
+        //Debug.Log ("ProjectileGun Start");
         if (pfProjectile?.GetComponent<Bullet>())
         {
             damage = 10;
@@ -159,26 +159,20 @@ public class ProjectileGun : Gun {
 
     void ShootSingle(Vector3 Position, Quaternion rotation)
     {
-        //Debug.Log("Shootsingle mn gowa");
-        Debug.Log($"Euler mn barra is {rotation.eulerAngles.z}");
+       
         GameObject projectile = Instantiate(pfProjectile, Position, rotation);
-        //GameObject projectile = Instantiate(pfProjectile, Position, rotation);
         if (projectile.GetComponent<Projectile>())
         {
         Projectile projectileScript = projectile.GetComponent<Projectile>();
-        Debug.Log($"transform.up mn b3d elsetup is {projectile.transform.up}");
+       
         projectileScript.Setup(projectile.transform.up);
         projectileScript.SetDamage(damage);
 
         }
-        else
-        {
-            Debug.Log("3leek wa7ed yaba4a <3");
-        }
     }
 
     public override void StopShoot () {
-        //Debug.Log ("ProjectileGun StopShoot");
+        
     }
 
     public override void Reload () {

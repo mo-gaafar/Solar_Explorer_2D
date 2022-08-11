@@ -7,7 +7,7 @@ public class ChargerAttackState : ChargerBaseState {
     public override void EnterState (ChargerEnemyController controller) {
         controller.AttackTimeStart = Time.time;
         controller.AttackCounter++;
-        Debug.Log ("Entering ChargerAttackState");
+        //Debug.Log ("Entering ChargerAttackState");
     }
     public override void UpdateState (ChargerEnemyController controller) {
         if (Time.time > controller.AttackTimeStart + controller.AttackTimeCooldown &&

@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Fuel
   - PlayerCamera
+  - Timer
   layers:
   - Default
   - TransparentFX
