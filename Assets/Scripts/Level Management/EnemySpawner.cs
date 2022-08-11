@@ -43,6 +43,7 @@ public class EnemySpawner : MonoBehaviour {
         //    SpawnRandomEnemy ();
         //    EnemyCounter++;
         //}
+        EnemyCounter = 0;
 
     }
 

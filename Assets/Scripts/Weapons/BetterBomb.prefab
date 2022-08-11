@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitEffect1: {fileID: 515070375164403711, guid: 323ad3ee542aa234fbf8232a7198634d, type: 3}
   HitEffect2: {fileID: 0}
+  bombradius: 1.2
   Affectedlayers:
     serializedVersion: 2
     m_Bits: 265

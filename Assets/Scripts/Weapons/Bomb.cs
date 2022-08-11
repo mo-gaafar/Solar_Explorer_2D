@@ -9,7 +9,7 @@ public class Bomb : Projectile
     public GameObject HitEffect2;
     float bombtimer=4;
     float timer = 0f;
-    float bombradius=1f;
+    [SerializeField]float bombradius=1f;
     bool exploded = false;
     Rigidbody2D rb;
     [SerializeField] LayerMask Affectedlayers;
