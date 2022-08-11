@@ -69,10 +69,13 @@ public class LevelManager : MonoBehaviour {
 
     public void GameOver () {
         // isLevelOver = true;
+        Debug.Log("Lol");
         Player.SetActive (false);
+        Player.GetComponent<PlayerController>().enabled = false;
         LevelOverScreen.SetActive (true);
         HUD.SetActive (false);
         onLevelOver.Invoke ();
+        Debug.Log("LolfelA5er");
     }
     public void Retry () {
         SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
