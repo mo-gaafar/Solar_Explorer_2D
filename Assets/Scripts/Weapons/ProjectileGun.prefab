@@ -61,3 +61,7 @@ MonoBehaviour:
   - {fileID: 2244350300451074483, guid: f604bc931cfc4824c847c317eea9e231, type: 3}
   - {fileID: 2244350300451074483, guid: 93567df9fdbbd9e48ac5bb9643f051ef, type: 3}
   - {fileID: 2244350300451074483, guid: 69aaad8eee0dfc34f87e5e377a4c3e90, type: 3}
+  BombPrefabs:
+  - {fileID: 803956977052833076, guid: 0fd27adaf6b7ce64bb958092b6bb0243, type: 3}
+  - {fileID: 803956977052833076, guid: d5dfb8a5e5ae25842a34c508ed0f3773, type: 3}
+  - {fileID: 803956977052833076, guid: 66876cecc744fc7409891cd411a06eb8, type: 3}

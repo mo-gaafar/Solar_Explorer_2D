@@ -168,13 +168,15 @@ public class LevelManager : MonoBehaviour {
         if (MainObjectives.Count == 0)
         {
             //LevelDone();
-            Debug.Log("Level Done");
+            LevelDone();
         }
 
     }
 
     void LevelDone()
     {
-
+        
+       SceneManager.LoadScene(1);
+      
     }
 }
