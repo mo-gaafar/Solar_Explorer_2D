@@ -7,10 +7,10 @@ public class Bomb : Projectile
     //TODO: WE MIGHT CHANGE THIS IMPLEMENTATION LATER
     public GameObject HitEffect1;
     public GameObject HitEffect2;
-    float bombtimer=5;
-    float bombradius=5;
+    float bombtimer=4;
+    float bombradius=1f;
     Rigidbody2D rb;
-    LayerMask Affectedlayers;
+    [SerializeField]LayerMask Affectedlayers;
     public override void Setup(Vector2 direction)
     {
         this.direction = direction;

@@ -138,3 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitEffect1: {fileID: 6812195618549918656, guid: 73c9acf5850af6d45a3aecde3e476a32, type: 3}
   HitEffect2: {fileID: 0}
+  Affectedlayers:
+    serializedVersion: 2
+    m_Bits: 265
