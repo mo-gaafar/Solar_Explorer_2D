@@ -59,6 +59,11 @@ public class LevelPicker : MonoBehaviour {
     public void PlayLevel () {
         if (CurrentLevelIndex >= 0 && CurrentLevelIndex < Levels.Count) {
             if (Levels[CurrentLevelIndex].IsUnlocked) {
+
+                //Destroy Music 
+                GameObject mus = GameObject.FindGameObjectWithTag("Game BGMusic");
+                Destroy(mus);
+
                 UnityEngine.SceneManagement.SceneManager.LoadScene (Levels[CurrentLevelIndex].LevelSceneIndex);
             } else {
                 Debug.Log ("Level is locked");
