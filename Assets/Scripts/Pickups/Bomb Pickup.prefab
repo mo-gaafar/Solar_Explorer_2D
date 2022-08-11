@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d416ff81f0cf943bc719d526fdc1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  Collider: {fileID: 0}
-  gun: {fileID: 0}
+  spriteRenderer: {fileID: 6339561085214064856}
+  Collider: {fileID: 6339561085214064862}
+  gun: {fileID: 483944516318837854, guid: ec75c6d8a503b9f458ac6028277f9a63, type: 3}
   TheGun: {fileID: 0}
-  MissilePrefab: {fileID: 0}
+  BombPrefab: {fileID: 803956977052833076, guid: 0fd27adaf6b7ce64bb958092b6bb0243, type: 3}

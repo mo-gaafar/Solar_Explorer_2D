@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: f52a58a68fccf3c4daabdf3228333041
   - enabled: 1
-    path: Assets/Scenes/MoonLevel2 1.unity
+    path: Assets/Scenes/MoonLevel.unity
     guid: 6436ccf1996f69241bd05bba90471692
   - enabled: 1
-    path: Assets/Scenes/EarthBeginning.unity
+    path: Assets/Scenes/EarthLevel.unity
     guid: 276b87904fc544d4dbef29328fa235da
   m_configObjects: {}

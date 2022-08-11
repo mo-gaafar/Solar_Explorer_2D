@@ -8,9 +8,11 @@ public class Bomb : Projectile
     public GameObject HitEffect1;
     public GameObject HitEffect2;
     float bombtimer=4;
+    float timer = 0f;
     float bombradius=1f;
+    bool exploded = false;
     Rigidbody2D rb;
-    [SerializeField]LayerMask Affectedlayers;
+    [SerializeField] LayerMask Affectedlayers;
     public override void Setup(Vector2 direction)
     {
         this.direction = direction;
@@ -21,17 +23,16 @@ public class Bomb : Projectile
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>(); 
-        Destroy(gameObject, bombtimer);
+        rb = GetComponent<Rigidbody2D>();
     }
     public override void Update()
     {
-        //float moveSpeed = 10f;
-        //transform.position += (Vector3)direction * moveSpeed * Time.deltaTime;
-
-        // how to detect hits???
-
-        // transform.Translate (direction * Time.deltaTime);
+        timer += Time.deltaTime;
+        if (timer > bombtimer && !exploded)
+        {
+            Explode();
+            exploded = true;
+        }
     }
 
     public override void OnCollisionEnter2D(Collision2D other)
@@ -59,10 +60,10 @@ public class Bomb : Projectile
 
     }
 
-    private void OnDestroy()
+    void Explode()
     {
-        Collider2D[]  col = Physics2D.OverlapCircleAll(transform.position, bombradius, Affectedlayers);
-        for(int i = 0; i < col.Length; i++)
+        Collider2D[] col = Physics2D.OverlapCircleAll(transform.position, bombradius, Affectedlayers);
+        for (int i = 0; i < col.Length; i++)
         {
             if (col[i].gameObject.tag == "Enemy" || col[i].gameObject.tag == "Player" || col[i].gameObject.tag == "Obstacle")
             {
@@ -76,9 +77,15 @@ public class Bomb : Projectile
 
             }
         }
-        //gameObject.GetComponent<AudioSource>().Play();
+        gameObject.GetComponent<AudioSource>().Play();
+
         GameObject lol = Instantiate(HitEffect1, transform.position, transform.rotation);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<Collider2D>().enabled = false;
+
         //lol = Instantiate(HitEffect2, transform.position, transform.rotation);
+        Destroy(gameObject,2);
+
     }
 
 }
