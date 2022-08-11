@@ -88,8 +88,10 @@ public class LevelManager : MonoBehaviour {
             if (MainObjectives[i].Type == ObjectiveType.Fuel)
             {
                 MainObjectives[i].CurrentCount += value;
+                Debug.Log($"Current Fuel is {MainObjectives[i].CurrentCount}");
                 if (MainObjectives[i].CheckComplete())
                 {
+                    Debug.Log("Completed Fuel");
                     Destroy(MainObjectives[i]);
                     MainObjectives.RemoveAt(i);
 
