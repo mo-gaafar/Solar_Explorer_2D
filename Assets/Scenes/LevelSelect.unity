@@ -2823,15 +2823,15 @@ MonoBehaviour:
   LevelCamera: {fileID: 1891873139}
   Levels:
   - LevelName: Earth
-    LevelSceneIndex: 3
+    LevelSceneIndex: 2
     LevelNumber: 1
     IsUnlocked: 1
     LevelObject: {fileID: 424414171}
     LevelDescription: home sweet home
   - LevelName: Moon
-    LevelSceneIndex: 2
+    LevelSceneIndex: 3
     LevelNumber: 2
-    IsUnlocked: 1
+    IsUnlocked: 0
     LevelObject: {fileID: 493819934}
     LevelDescription: the moon revloves around the earth
   - LevelName: Mars
@@ -6784,7 +6784,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7634408, y: 1}
+    m_SensorSize: {x: 2.13035, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

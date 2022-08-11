@@ -4,6 +4,7 @@ using Cinemachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Level {
@@ -32,6 +33,15 @@ public class LevelPicker : MonoBehaviour {
     public int CurrentLevelIndex = 0;
 
     private void Start () {
+
+        for (int i = 0; i < Levels.Count; i++)
+        {
+           
+            if (PlayerPrefs.HasKey(Levels[i].LevelName) && PlayerPrefs.GetInt(Levels[i].LevelName) != 0)
+            {
+                Levels[i].IsUnlocked = true;
+            }
+        }
         GotoLevel (CurrentLevelIndex);
 
     }
@@ -57,17 +67,28 @@ public class LevelPicker : MonoBehaviour {
         }
     }
     public void PlayLevel () {
-        if (CurrentLevelIndex >= 0 && CurrentLevelIndex < Levels.Count) {
-            if (Levels[CurrentLevelIndex].IsUnlocked) {
+        if (Levels[CurrentLevelIndex].LevelNumber<= (SceneManager.sceneCountInBuildSettings-2))
+        {
+            if (CurrentLevelIndex >= 0 && CurrentLevelIndex < Levels.Count)
+            {
+                if (Levels[CurrentLevelIndex].IsUnlocked)
+                {
 
-                //Destroy Music 
-                GameObject mus = GameObject.FindGameObjectWithTag("Game BGMusic");
-                Destroy(mus);
+                    //Destroy Music 
+                    GameObject mus = GameObject.FindGameObjectWithTag("Game BGMusic");
+                    Destroy(mus);
 
-                UnityEngine.SceneManagement.SceneManager.LoadScene (Levels[CurrentLevelIndex].LevelSceneIndex);
-            } else {
-                Debug.Log ("Level is locked");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(Levels[CurrentLevelIndex].LevelSceneIndex);
+                }
+                else
+                {
+                    Debug.Log("Level is locked");
+                }
             }
+        }
+        else
+        {
+            Debug.Log("Not Implemented yet");
         }
     }
     //TODO implement level progression in playerprefs
@@ -82,10 +103,20 @@ public class LevelPicker : MonoBehaviour {
     // }
     public void UpdateDesc () {
         if (Levels[CurrentLevelIndex].IsUnlocked) {
-            Lock.SetActive (false);
-            PlayButton.SetActive (true);
-            LevelNameText.text = $"Level {Levels[CurrentLevelIndex].LevelNumber}: {Levels[CurrentLevelIndex].LevelName}";
-            LevelDescriptionText.text = Levels[CurrentLevelIndex].LevelDescription;
+            if (Levels[CurrentLevelIndex].LevelNumber > (SceneManager.sceneCountInBuildSettings - 2))
+            {
+                Lock.SetActive(true);
+                PlayButton.SetActive(false);
+                LevelNameText.text = "Coming Soon";
+                LevelDescriptionText.text = "We Shall Deliver";
+            }
+            else
+            {
+                Lock.SetActive (false);
+                PlayButton.SetActive (true);
+                LevelNameText.text = $"Level {Levels[CurrentLevelIndex].LevelNumber}: {Levels[CurrentLevelIndex].LevelName}";
+                LevelDescriptionText.text = Levels[CurrentLevelIndex].LevelDescription;
+            }
         } else {
             Lock.SetActive (true);
             PlayButton.SetActive (false);

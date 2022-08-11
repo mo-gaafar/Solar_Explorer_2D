@@ -4,7 +4,19 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+//Dictionary<int, string> SceneIndexToPlanetName = new Dictionary<int, string>();
+//SceneIndexToPlanetName.Add(2, "Earth");
+//SceneIndexToPlanetName.Add(3, "Moon");
+//SceneIndexToPlanetName.Add(4, "Mars");
+//SceneIndexToPlanetName.Add(4, "Venus");
+
 public class LevelManager : MonoBehaviour {
+
+    Dictionary<int, string> SceneIndexToPlanetName = new Dictionary<int, string>()
+    {
+        { 2,"Earth" }, {3,"Moon"}, {4,"Mars"}, {5,"Venus"}
+    };
+
     public float MaxLevelTimeSec = 100f;
     private float currentLevelTime;
     private bool isLevelOver = false;
@@ -178,7 +190,9 @@ public class LevelManager : MonoBehaviour {
 
     void LevelDone()
     {
-        
+        //You need to first check you aren't at the end of the game 
+        string planetName = SceneIndexToPlanetName[SceneManager.GetActiveScene().buildIndex+1];
+        PlayerPrefs.SetInt(planetName, 1);
        SceneManager.LoadScene(1);
       
     }
