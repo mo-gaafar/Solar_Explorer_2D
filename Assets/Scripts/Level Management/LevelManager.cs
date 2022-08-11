@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour {
     private bool isLevelOver = false;
     [SerializeField] private bool TimeConstraintActive = true;
     private int CurrentLivingEnemies = 0;
-    private int MaxNumberOfEnemies = 10;
+    [SerializeField] private int MaxNumberOfEnemies = 10;
     public UnityEvent onLevelOver;
     public UnityEvent onLevelStart;
     public GameObject Enemyspawner;
@@ -21,7 +21,10 @@ public class LevelManager : MonoBehaviour {
     [SerializeField] List<Objective> MainObjectives;
     [SerializeField] List<Objective> SecondaryObjectives;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        EnemySpawner.MaxEnemies = MaxNumberOfEnemies;
+    }
     void Update () {
 
         currentLevelTime += Time.deltaTime;
