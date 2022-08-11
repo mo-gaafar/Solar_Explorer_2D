@@ -66,14 +66,13 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene (0);
     }
 
-    public void UpdateandCheckFuel(float fraction)
+    public void UpdateandCheckFuel(float value)
     {
         for (int i = 0; i < MainObjectives.Count; i++)
         {
             if (MainObjectives[i].Type == ObjectiveType.Fuel)
             {
-                Debug.Log(fraction);
-                MainObjectives[i].CurrentCount = MainObjectives[i].requiredCount* fraction;
+                MainObjectives[i].CurrentCount += value;
                 if (MainObjectives[i].CheckComplete())
                 {
                     Destroy(MainObjectives[i]);
@@ -88,7 +87,7 @@ public class LevelManager : MonoBehaviour {
         {
             if (SecondaryObjectives[i].Type == ObjectiveType.Fuel)
             {
-                SecondaryObjectives[i].CurrentCount = SecondaryObjectives[i].requiredCount * fraction;
+                SecondaryObjectives[i].CurrentCount += value;
                 if (SecondaryObjectives[i].CheckComplete())
                 {
                     Destroy(SecondaryObjectives[i]);
@@ -132,17 +131,50 @@ public class LevelManager : MonoBehaviour {
 
         }
     }
-    
 
-    bool CheckLevelDone()
+    public void UpdateandCheckStarshipKey(float value)
+    {
+        for (int i = 0; i < MainObjectives.Count; i++)
+        {
+            if (MainObjectives[i].Type == ObjectiveType.StarshipKey)
+            {
+                MainObjectives[i].CurrentCount += value;
+                if (MainObjectives[i].CheckComplete())
+                {
+                    Destroy(MainObjectives[i]);
+                    MainObjectives.RemoveAt(i);
+
+                }
+            }
+
+        }
+        CheckLevelDone();
+    }
+
+    public void  CheckLevelDone()
     {
         //Note that non active missions return false;
+        /*Debug.Log("Checking Done")*/;
+                //Debug.Log("Checking....");
         for(int i=0;i < MainObjectives.Count; i++)
         {
-            if (!MainObjectives[i].CheckComplete()) { return false; }
-            Destroy(MainObjectives[i]);
-            MainObjectives.RemoveAt(i);
+            //Debug.Log("Now Checking"+ MainObjectives[i].Type);
+            if (MainObjectives[i].CheckComplete()) {
+                //Debug.Log("Truly done in the name of god");
+                Destroy(MainObjectives[i]);
+                MainObjectives.RemoveAt(i);
+            }
         }
-        return true;
+        if (MainObjectives.Count == 0)
+        {
+            //LevelDone();
+            Debug.Log("Level Done");
+        }
+
+    }
+
+    void LevelDone()
+    {
+
     }
 }

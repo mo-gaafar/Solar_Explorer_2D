@@ -10,7 +10,7 @@ public abstract class MainController : MonoBehaviour {
 
     public Health healthComponent;
 
-    [SerializeField] public float maxForce = 5f;
+    [SerializeField] public float Speed = 5f;
     [SerializeField] public static float EnemyDetectionRadius = 10f;
 
     protected Vector2 position = new Vector2 ();
@@ -58,7 +58,7 @@ public abstract class MainController : MonoBehaviour {
     public void MoveTowards (Vector2 target, float verticalAxis) {
         Vector2 direction = target - (Vector2) position;
         direction *= verticalAxis;
-        rb.AddForce (new Vector2 (direction.x * maxForce, direction.y * maxForce));
+        rb.AddForce (new Vector2 (direction.x * Speed, direction.y * Speed));
     }
 
     //health

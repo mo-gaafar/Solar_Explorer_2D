@@ -27,11 +27,35 @@ public class Objective : MonoBehaviour
         return true;
         
     }
+    public void SetCurrentCount(float value)
+    {
+        CurrentCount = value;
+    }
+
+    public void SetActive(bool value)
+    {
+        Active = value;
+    }
+
+    //public void SetComplete(bool value)
+    //{
+    //    Active = value;
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        onObjectiveStart.Invoke();
-        Active = true;
+        if (!Active)
+        {
+            Active = true;
+            onObjectiveStart.Invoke();
+
+        }
         //Add Complex behaviour later if you want (like the objective stops when afar from the colliders 
+    }
+
+
+    private void OnDestroy()
+    {
+        onObjectiveEnd.Invoke();
     }
 }

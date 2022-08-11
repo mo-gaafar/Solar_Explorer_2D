@@ -13,8 +13,6 @@ public class PlayerController : MainController {
     [SerializeField] public List<GameObject> EnemiesAttacking = new List<GameObject> ();
     [SerializeField] public int MaxEnemiesAttacking = 4;
 
-    private float CurrentFuel = 0;
-    public float MaxFuel = 1000;
 
     private float vertical = 0; //acc = 1 decel = -1
 
@@ -65,8 +63,8 @@ public class PlayerController : MainController {
         }
     }
     public void MoveTowards (Vector2 target, float verticalAxis) {
-        float Horizontal = Input.GetAxisRaw ("Horizontal") * maxForce;
-        float Vertical = Input.GetAxisRaw ("Vertical") * maxForce;
+        float Horizontal = Input.GetAxisRaw ("Horizontal") * Speed;
+        float Vertical = Input.GetAxisRaw ("Vertical") * Speed;
         rb.velocity = new Vector2 (Horizontal, Vertical);
     }
 
@@ -83,15 +81,4 @@ public class PlayerController : MainController {
 
     }
 
-    private void OnTriggerEnter2D (Collider2D other) {
-        if (other.tag == "Fuel") {
-            CurrentFuel += (other.gameObject.GetComponent<Fuel> ()).FuelAmount;
-
-            float fraction = CurrentFuel / MaxFuel;
-            //Call from UI and update it 
-            //TODO: ADD UI UPDATE HERE
-            onFuelPickup.Invoke (fraction);
-            Destroy (other.gameObject);
-        }
-    }
 }

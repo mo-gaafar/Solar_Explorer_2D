@@ -5025,131 +5025,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f84e7385f4162e541bffb95a301da1ae, type: 3}
---- !u!1 &204919632
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 204919636}
-  - component: {fileID: 204919635}
-  - component: {fileID: 204919634}
-  - component: {fileID: 204919633}
-  m_Layer: 0
-  m_Name: Fuel (1)
-  m_TagString: Fuel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &204919633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204919632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
---- !u!61 &204919634
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204919632}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.65625, y: 0.65625}
-    newSize: {x: 0.21, y: 0.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.65625, y: 0.65625}
-  m_EdgeRadius: 0
---- !u!212 &204919635
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204919632}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70f1725dfe53de5468ef9f9a1c7772e0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.21, y: 0.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &204919636
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204919632}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.619999, y: -11.38, z: 0}
-  m_LocalScale: {x: 0.619, y: 0.619, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 216904219}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &205073147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5484,7 +5359,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 204919636}
+  - {fileID: 1388804193}
+  - {fileID: 2010054423}
   - {fileID: 961041330}
   - {fileID: 423647582}
   - {fileID: 600821606}
@@ -5495,9 +5371,6 @@ Transform:
   - {fileID: 2020281061}
   - {fileID: 1053379076}
   - {fileID: 471805510}
-  - {fileID: 2010054423}
-  - {fileID: 1388804193}
-  - {fileID: 1718660173}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6736,27 +6609,14 @@ GameObject:
   - component: {fileID: 251807086}
   - component: {fileID: 251807085}
   - component: {fileID: 251807084}
-  - component: {fileID: 251807083}
+  - component: {fileID: 251807087}
   m_Layer: 0
-  m_Name: Fuel (21)
+  m_Name: Fuel (9)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &251807083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251807082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &251807084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6848,8 +6708,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251807087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251807082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &252384024
 GameObject:
   m_ObjectHideFlags: 0
@@ -6961,63 +6861,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &265174919
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 155107815404271465, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_Name
-      value: NProjectiles Upgrades (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_RootOrder
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 53.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
 --- !u!1 &268924410
 GameObject:
   m_ObjectHideFlags: 0
@@ -7833,7 +7676,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5715478116920109976, guid: 3e851533d53d8e448b1e3836210ac6ec, type: 3}
   m_PrefabInstance: {fileID: 5715478117220533192}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2031940701}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -10809,27 +10652,14 @@ GameObject:
   - component: {fileID: 423647582}
   - component: {fileID: 423647581}
   - component: {fileID: 423647580}
-  - component: {fileID: 423647579}
+  - component: {fileID: 423647583}
   m_Layer: 0
-  m_Name: Fuel (16)
+  m_Name: Fuel (4)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &423647579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423647578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &423647580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10921,8 +10751,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &423647583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423647578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &424624377
 GameObject:
   m_ObjectHideFlags: 0
@@ -11316,6 +11186,8 @@ GameObject:
   m_Component:
   - component: {fileID: 444178216}
   - component: {fileID: 444178215}
+  - component: {fileID: 444178217}
+  - component: {fileID: 444178218}
   m_Layer: 0
   m_Name: SpaceShipKey
   m_TagString: Untagged
@@ -11390,6 +11262,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &444178217
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444178214}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.46875, y: 0.46875}
+    newSize: {x: 0.46875, y: 0.46875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46875, y: 0.46875}
+  m_EdgeRadius: 0
+--- !u!114 &444178218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444178214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckStarshipKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 1
 --- !u!1 &446548407
 GameObject:
   m_ObjectHideFlags: 0
@@ -11807,63 +11733,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &466448844
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 155107815404271465, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_Name
-      value: NProjectiles Upgrades (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_RootOrder
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 51.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
 --- !u!1 &468164165
 GameObject:
   m_ObjectHideFlags: 0
@@ -12007,6 +11876,7 @@ MonoBehaviour:
   MainObjectives:
   - {fileID: 638173209}
   - {fileID: 1014717309}
+  - {fileID: 872461460}
   SecondaryObjectives:
   - {fileID: 1236730740}
 --- !u!1 &470678557
@@ -12131,27 +12001,14 @@ GameObject:
   - component: {fileID: 471805510}
   - component: {fileID: 471805509}
   - component: {fileID: 471805508}
-  - component: {fileID: 471805507}
+  - component: {fileID: 471805511}
   m_Layer: 0
-  m_Name: Fuel (24)
+  m_Name: Fuel (12)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &471805507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471805506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &471805508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12243,8 +12100,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &471805511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471805506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &476545281
 GameObject:
   m_ObjectHideFlags: 0
@@ -12841,27 +12738,14 @@ GameObject:
   - component: {fileID: 510118401}
   - component: {fileID: 510118400}
   - component: {fileID: 510118399}
-  - component: {fileID: 510118398}
+  - component: {fileID: 510118402}
   m_Layer: 0
-  m_Name: Fuel (19)
+  m_Name: Fuel (7)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &510118398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510118397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &510118399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12953,8 +12837,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &510118402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510118397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &518725683
 GameObject:
   m_ObjectHideFlags: 0
@@ -16133,63 +16057,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &586896069
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 155107815404271465, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_Name
-      value: NProjectiles Upgrades (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_RootOrder
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 55.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
 --- !u!1 &589508573
 GameObject:
   m_ObjectHideFlags: 0
@@ -16591,27 +16458,14 @@ GameObject:
   - component: {fileID: 600821606}
   - component: {fileID: 600821605}
   - component: {fileID: 600821604}
-  - component: {fileID: 600821603}
+  - component: {fileID: 600821607}
   m_Layer: 0
-  m_Name: Fuel (17)
+  m_Name: Fuel (5)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &600821603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600821602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &600821604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16703,8 +16557,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600821607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600821602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &601078487
 GameObject:
   m_ObjectHideFlags: 0
@@ -17011,63 +16905,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &609657435
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 155107815404271465, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_Name
-      value: NProjectiles Upgrades (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_RootOrder
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 51.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
 --- !u!1 &610268159
 GameObject:
   m_ObjectHideFlags: 0
@@ -17632,17 +17469,29 @@ MonoBehaviour:
   onObjectiveEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 872461462}
+        m_TargetAssemblyTypeName: SpaceShipRequirement, Assembly-CSharp
+        m_MethodName: SetFuelCheck
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 872461460}
+        m_TargetAssemblyTypeName: Objective, Assembly-CSharp
+        m_MethodName: SetCurrentCount
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   Active: 0
   requiredCount: 1000
@@ -17660,7 +17509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &643130691
 GameObject:
@@ -17736,7 +17585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 0}
-  maxForce: 3
+  Speed: 5
   rb: {fileID: 0}
   onShoot:
     m_PersistentCalls:
@@ -17784,7 +17633,6 @@ MonoBehaviour:
         m_CallState: 2
   EnemiesAttacking: []
   MaxEnemiesAttacking: 2
-  MaxFuel: 1000
 --- !u!212 &643130696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19656,63 +19504,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &707138887
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_RootOrder
-      value: 39
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 49.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157498, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_Name
-      value: Damage Upgrade (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
 --- !u!1 &714590920
 GameObject:
   m_ObjectHideFlags: 0
@@ -23941,6 +23732,9 @@ GameObject:
   m_Component:
   - component: {fileID: 872461459}
   - component: {fileID: 872461458}
+  - component: {fileID: 872461461}
+  - component: {fileID: 872461460}
+  - component: {fileID: 872461462}
   m_Layer: 0
   m_Name: escape spaceship
   m_TagString: Untagged
@@ -24013,8 +23807,93 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &872461460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872461457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4627d723c90e584e8ac6b3b8e450336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2
+  onObjectiveStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: CheckLevelDone
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onObjectiveEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  Active: 0
+  requiredCount: 1
+  CurrentCount: 0
+--- !u!61 &872461461
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872461457}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1875, y: 1.0625}
+    newSize: {x: 1.1875, y: 1.0625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1875, y: 1.0625}
+  m_EdgeRadius: 0
+--- !u!114 &872461462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872461457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e9e508d4a861048b8afa16c7d4f9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 872461461}
 --- !u!1 &873229196
 GameObject:
   m_ObjectHideFlags: 0
@@ -26235,27 +26114,14 @@ GameObject:
   - component: {fileID: 961041330}
   - component: {fileID: 961041329}
   - component: {fileID: 961041328}
-  - component: {fileID: 961041327}
+  - component: {fileID: 961041331}
   m_Layer: 0
-  m_Name: Fuel (14)
+  m_Name: Fuel (3)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &961041327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961041326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &961041328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26347,8 +26213,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961041331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961041326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &968207449
 GameObject:
   m_ObjectHideFlags: 0
@@ -27888,7 +27794,7 @@ GameObject:
   - component: {fileID: 1014717309}
   - component: {fileID: 1014717308}
   m_Layer: 0
-  m_Name: FinStarshipKey
+  m_Name: FindSpaceshipKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27938,7 +27844,19 @@ MonoBehaviour:
       m_Calls: []
   onObjectiveEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872461462}
+        m_TargetAssemblyTypeName: SpaceShipRequirement, Assembly-CSharp
+        m_MethodName: SetKey
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   Active: 0
   requiredCount: 1
   CurrentCount: 0
@@ -27955,7 +27873,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015314061
 GameObject:
@@ -28445,27 +28363,14 @@ GameObject:
   - component: {fileID: 1048310998}
   - component: {fileID: 1048310997}
   - component: {fileID: 1048310996}
-  - component: {fileID: 1048310995}
+  - component: {fileID: 1048310999}
   m_Layer: 0
-  m_Name: Fuel (18)
+  m_Name: Fuel (6)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1048310995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048310994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &1048310996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28557,8 +28462,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048310999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048310994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &1053379072
 GameObject:
   m_ObjectHideFlags: 0
@@ -28570,27 +28515,14 @@ GameObject:
   - component: {fileID: 1053379076}
   - component: {fileID: 1053379075}
   - component: {fileID: 1053379074}
-  - component: {fileID: 1053379073}
+  - component: {fileID: 1053379077}
   m_Layer: 0
-  m_Name: Fuel (23)
+  m_Name: Fuel (11)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1053379073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053379072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &1053379074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28682,8 +28614,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1053379077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053379072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &1055144389
 GameObject:
   m_ObjectHideFlags: 0
@@ -30021,63 +29993,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1115883993
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_RootOrder
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 50.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157498, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_Name
-      value: Damage Upgrade (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
 --- !u!1 &1118735502
 GameObject:
   m_ObjectHideFlags: 0
@@ -32213,63 +32128,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1170344667
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_RootOrder
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 49.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157498, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_Name
-      value: Damage Upgrade (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
 --- !u!1 &1180646618
 GameObject:
   m_ObjectHideFlags: 0
@@ -34480,7 +34338,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1237496598
 GameObject:
@@ -38221,15 +38079,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.91
+      value: 65.3
       objectReference: {fileID: 0}
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.64
+      value: 10.68
       objectReference: {fileID: 0}
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38670,9 +38528,9 @@ GameObject:
   - component: {fileID: 1388804193}
   - component: {fileID: 1388804196}
   - component: {fileID: 1388804195}
-  - component: {fileID: 1388804194}
+  - component: {fileID: 1388804197}
   m_Layer: 0
-  m_Name: Fuel (3)
+  m_Name: Fuel  (1)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38691,21 +38549,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1388804194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388804192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &1388804195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38784,6 +38629,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1388804197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388804192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &1398322750
 GameObject:
   m_ObjectHideFlags: 0
@@ -39294,63 +39179,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1422917514
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 155107815404271465, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_Name
-      value: NProjectiles Upgrades (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_RootOrder
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 50.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 155107815404271469, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 720fdbf15cdc8014bb168c6d409b6392, type: 3}
 --- !u!1 &1430016797
 GameObject:
   m_ObjectHideFlags: 0
@@ -41036,15 +40864,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 49.35
+      value: 53.24
       objectReference: {fileID: 0}
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.47
+      value: 12.14
       objectReference: {fileID: 0}
     - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -42482,63 +42310,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1518817037
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_RootOrder
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 51.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157498, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_Name
-      value: Damage Upgrade (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
 --- !u!1 &1518955865
 GameObject:
   m_ObjectHideFlags: 0
@@ -44350,63 +44121,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1599382281
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 50.514584
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.854586
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157496, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894693012738157498, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
-      propertyPath: m_Name
-      value: Damage Upgrade
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc369cdd081407e43b7169edde19fc50, type: 3}
 --- !u!1 &1599395030
 GameObject:
   m_ObjectHideFlags: 0
@@ -47895,131 +47609,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1718660172
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1718660173}
-  - component: {fileID: 1718660176}
-  - component: {fileID: 1718660175}
-  - component: {fileID: 1718660174}
-  m_Layer: 0
-  m_Name: Fuel (4)
-  m_TagString: Fuel
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1718660173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718660172}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.12, y: -13.09, z: 0}
-  m_LocalScale: {x: 0.619, y: 0.619, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 216904219}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1718660174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718660172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
---- !u!61 &1718660175
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718660172}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.65625, y: 0.65625}
-    newSize: {x: 0.21, y: 0.21}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.65625, y: 0.65625}
-  m_EdgeRadius: 0
---- !u!212 &1718660176
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718660172}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70f1725dfe53de5468ef9f9a1c7772e0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.21, y: 0.21}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1729952751
 GameObject:
   m_ObjectHideFlags: 0
@@ -48900,7 +48489,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.227017, y: 1}
+    m_SensorSize: {x: 1.844086, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -49016,27 +48605,14 @@ GameObject:
   - component: {fileID: 1779042298}
   - component: {fileID: 1779042297}
   - component: {fileID: 1779042296}
-  - component: {fileID: 1779042295}
+  - component: {fileID: 1779042299}
   m_Layer: 0
-  m_Name: Fuel (20)
+  m_Name: Fuel (8)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1779042295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779042294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &1779042296
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49128,8 +48704,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1779042299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779042294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &1789124880
 GameObject:
   m_ObjectHideFlags: 0
@@ -54138,7 +53754,7 @@ GameObject:
   - component: {fileID: 2010054423}
   - component: {fileID: 2010054426}
   - component: {fileID: 2010054425}
-  - component: {fileID: 2010054424}
+  - component: {fileID: 2010054427}
   m_Layer: 0
   m_Name: Fuel (2)
   m_TagString: Fuel
@@ -54159,21 +53775,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 11
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2010054424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010054422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &2010054425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54252,6 +53855,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2010054427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010054422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &2011052732
 GameObject:
   m_ObjectHideFlags: 0
@@ -54569,27 +54212,14 @@ GameObject:
   - component: {fileID: 2020281061}
   - component: {fileID: 2020281060}
   - component: {fileID: 2020281059}
-  - component: {fileID: 2020281058}
+  - component: {fileID: 2020281062}
   m_Layer: 0
-  m_Name: Fuel (22)
+  m_Name: Fuel (10)
   m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2020281058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020281057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21b0e45c4b73d945b2bbab4f326f9ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FuelAmount: 100
 --- !u!61 &2020281059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54681,8 +54311,48 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216904219}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2020281062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020281057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc79ed93f045444b9599fd42b77bccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468823923}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: UpdateandCheckFuel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2031940703}
+        m_TargetAssemblyTypeName: FuelHUD, Assembly-CSharp
+        m_MethodName: ChangeValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  value: 100
 --- !u!1 &2025489195
 GameObject:
   m_ObjectHideFlags: 0
@@ -54765,7 +54435,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027703264
 GameObject:
@@ -55073,6 +54743,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2031940701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5715478116920109958, guid: 3e851533d53d8e448b1e3836210ac6ec, type: 3}
+  m_PrefabInstance: {fileID: 5715478117220533192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2031940703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031940701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2772f17dd99fe4b8a6fc5bc9c8c000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 318269520}
+  MaxFuelValue: 1000
 --- !u!1 &2033184020
 GameObject:
   m_ObjectHideFlags: 0
