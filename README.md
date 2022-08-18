@@ -4,9 +4,9 @@
 
 Solar Explorer is a game where you can explore the solar system, destroying each planet you visit and collecting the resources that you find to be able to survive and advance to the next planet.
 
-## Requirements
-
 The game is built using the [Unity](https://unity3d.com/) game engine using editor version **2021.3.4f1**
+
+## Requirements
 
 |Name | Description|
 |----------|-------------|
