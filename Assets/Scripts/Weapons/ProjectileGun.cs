@@ -107,44 +107,24 @@ public class ProjectileGun : Gun {
 
     }
 
-    public override void Shoot (Transform firingPoint) {
+    public override void Shoot(Transform firingPoint)
+    {
         //Debug.Log("ProjectileGun Shoot");
 
-        if (Time.time - lastShotTime > shootingInterval) {
+        if (Time.time - lastShotTime > shootingInterval)
+        {
             //Debug.Log("Shoot mn gowa");
             lastShotTime = Time.time;
             if (NumberOfProjectiles == 1)
             {
-            //Debug.Log("Shootsingle barra");
+                //Debug.Log("Shootsingle barra");
                 ShootSingle(firingPoint.position, firingPoint.rotation);
-            }
-            else if (NumberOfProjectiles == 2)
-            {
-                Vector2 Offset = new Vector2(0, 0);
-                float magnitude = 0;
-                gunWidth = 1f;
-                float increment = gunWidth / NumberOfProjectiles;
-                for (int i = 0; i < 2; i++)
-                {
-                    if (i % 2 == 0)
-                    {
-                        magnitude += increment;
-                        Offset = magnitude * (firingPoint.right);
-                    }
-                    else
-                    {
-                        Offset = -magnitude * (firingPoint.right);
-
-                    }
-
-                    ShootSingle(firingPoint.position + (Vector3)Offset, firingPoint.rotation);
-                }
             }
             else
             {
                 Vector2 Offset = new Vector2(0, 0);
                 float magnitude = 0;
-                gunWidth = NumberOfProjectiles-0.5f;
+                gunWidth = NumberOfProjectiles - 0.5f;
                 float increment = gunWidth / NumberOfProjectiles;
                 int i;
                 for (i = 0; i < NumberOfProjectiles - 1; i++)
@@ -163,17 +143,16 @@ public class ProjectileGun : Gun {
                     ShootSingle(firingPoint.position + (Vector3)Offset, firingPoint.rotation);
                 }
 
-                if (i % 2 == 1)
+                if (i % 2 == 0)
                 {
                     ShootSingle(firingPoint.position, firingPoint.rotation);
                 }
                 else
                 {
-                    magnitude += increment;
-                    Offset = magnitude * (firingPoint.right);
+                    //magnitude += increment;
+                    Offset = -magnitude * (firingPoint.right);
                     ShootSingle(firingPoint.position + (Vector3)Offset, firingPoint.rotation);
                 }
-
 
             }
 
